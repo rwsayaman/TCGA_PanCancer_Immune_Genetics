@@ -7,7 +7,7 @@
 Rare variant analysis was based on TCGA germline WES data. We selected pathoegnic and likely pathogenic variants that were identified by Huang KL et al, Cell, 2018 within 99 genes. We collapsed these variants within each gene. Then each gene was assigned to a pathway, and gene burden of rare variants were then collapsed to form a pathway burden of rare variants. Association was tested between immune traits and both pathway and gene burden of rare variants. Linear regression was performed for continuous traits (with or without log10 transformation) and logistic regression was performed for dichotomized traits. Several covariates were included in the model: Age, Sex, PC1-7, and Cancer Type.
 
 ## R script for association analysis
-Analysis was performed using R version 3.5.2 (https://cran.r-project.org/). R script is attached with input and output examples. 
+Analysis was performed using R version 3.5.2 (https://cran.r-project.org/). R script `RareVariantAnalysis.R` is attached with input and output examples. 
 
 Seven ```input files``` are required:
 1. Phenotype file (```PhenoFile.csv```): This file contains the subject IDs, all immune traits, and covariates. The file's header indicate the name of each column. 
