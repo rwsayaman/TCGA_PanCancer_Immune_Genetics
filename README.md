@@ -1,4 +1,4 @@
-# TCGA_Germline_Immune_Response
+# TCGA_PanCancer_Immune_Genetics
 
 Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. Please additionally cite: Thorsson et al., Immunity 2018 when referencing the immune traits; and Carrot-Zhang et al., Cancer Cell 2020 when referencing ancestry assignments.
 
