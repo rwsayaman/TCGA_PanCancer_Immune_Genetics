@@ -10,8 +10,7 @@ Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immu
 
 ## Contributors
 * Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
-* Donglei Hu, Ph.D., University of California, San Francisco
-* Scott Huntsman, University of California, San Francisco
+* Vesteinn Thorsson
 
 
 ## Contents
