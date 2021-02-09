@@ -1,0 +1,14 @@
+#!/bin/sh 
+#PBS -e /zivlab/data3/rsayaman/GitHub/TCGA_Germline_Immune_Response/Code/PreProcess_HRCImputed/log_report
+#PBS -o /zivlab/data3/rsayaman/GitHub/TCGA_Germline_Immune_Response/Code/PreProcess_HRCImputed/log_report
+
+## Set the job name
+#PBS -N qsub_unzip_HRC_chr
+#PBS -l vmem=128gb
+#PBS -t 1-22
+
+# Run my job
+cd  /zivlab/data3/rsayaman/GitHub/TCGA_Germline_Immune_Response/Data/HRC_Imputed_Genotyping_Data
+
+unzip -P 55PlfZ=rENaogE chr_$PBS_ARRAYID.zip
+
