@@ -32,7 +32,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 ## Required Software
 * bcftools
 * tabix
-* plink
+* plink (PLINK v1.90b5)
 
 ## Contents
 
