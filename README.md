@@ -39,12 +39,21 @@ Code contained herein are meant as a guide and should be modified and adapted to
   * Heritability Analysis Data
   
 ## Resources
-* TCGA QC'd and HRC Imputed Genotyping Data 
-  * QC'd Unimputed Genotyping Data (controlled access)
-  * HRC Stranded Unimputed Genotyping Data (controlled access)
-  * 1000 Genomes Stranded Unimputed Genotyping Data (controlled access)
-  * HRC Imputed Genotyping Data (controlled access)
-* TCGA Germline Immune Response GWAS Summary Statistics
+1. TCGA QC'd and HRC Imputed Genotyping Data  
+   * Access to the TCGA original birdseed and pre-processed quality controlled genotyping data imputed to HRC generated in the current manuscript ("Sayaman et al TCGA QC HRC Imputed Genotyping Data") requires GDC controlled access permission approval.
+   * The quality controlled and HRC imputed genotyping data and the UCSF ancestry assignments were contributed towards ancestry analyses (Carrot-Zhang et al., 2020) and are accessible at the GDC publication page (https://gdc.cancer.gov/about-data/publications/CCG-AIM-2020).
+     * Folder: "TCGA QC HRC Imputed Genotyping Data used by the AIM AWG (from Sayaman et al)"
+       * Subfolder: "HRC Imputed Genotyping Data"
+   * Download and read the READ_ME_4.txt file.
+   * Controlled Access data include:
+     * QC'd Unimputed Genotyping Data
+     * HRC Stranded Unimputed Genotyping Data
+     * 1000 Genomes Stranded Unimputed Genotyping Data
+     * HRC Imputed Genotyping Data
+2. TCGA Germline Immune Response GWAS Summary Statistics
+   * Figshare: https://figshare.com/articles/dataset/Sayaman_et_al_TCGA_Germline-Immune_GWAS_Summary_Statistics/13077920/1
+3. Interactive visualization of results 
+   * CRI iAtlas (https://www.cri-iatlas.org/)
 
   
   
