@@ -12,3 +12,9 @@ Sayaman, Saad, et al., Germline genetic contribution to the immune landscape of 
 * Mohamad Saad, Ph.D., Qatar Computing Research Institute: msaad@hbku.edu.qa
 * Donglei Hu, Ph.D., University of California, San Francisco
 * Scott Huntsman, University of California, San Francisco
+
+
+## Contents
+* Heritability Analysis
+* GWAS
+* Rare Variant Analysis
