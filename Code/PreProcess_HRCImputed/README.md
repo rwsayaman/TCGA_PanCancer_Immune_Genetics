@@ -19,7 +19,7 @@ Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code con
 
 Code contained herein are meant as a guide and should be modified and adapted to match your server specifications and directories. 
 
-Authors will not be available to troubleshoot. Please familiarize yourself with the associated scripting languages, and please contact your server admin for instructions on the proper format for submitting jobs to your compute cluster.
+Authors will not be available to assist with troubleshooting. Please familiarize yourself with the associated scripting languages, and contact your server admin for instructions on the proper format for submitting jobs to your compute cluster.
 
 ## Required Inputs
 1. TCGA HRC Imputed Genotyping Data
@@ -28,7 +28,8 @@ Authors will not be available to troubleshoot. Please familiarize yourself with 
       * Folder: "TCGA QC HRC Imputed Genotyping Data used by the AIM AWG (from Sayaman et al)"
         * Subfolder: "HRC  Imputed Genotyping Data"
   3. Download and read the READ_ME_4.txt file.
-  4. Dowload contents of the folder, e.g. chr*.zip files into 
+  4. Dowload contents of the folder, e.g. chr*.zip files into the ./GitHub/TCGA_Germline_Immune_Response/Data/HRC_Imputed_Genotyping_Data folder.
 
 ## Contents
-1. qsub_unzip_HRC_chr.txt
+1. Unzip HRC Imputed Genotyping Data. Data is password protected.
+    * qsub_unzip_HRC_chr.txt
