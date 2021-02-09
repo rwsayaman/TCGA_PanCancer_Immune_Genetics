@@ -16,10 +16,10 @@ Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code con
 
 
 ## Contents
+* Pre-HRC Imputed
 * Heritability Analysis
 * GWAS
 * Rare Variant Analysis
 * Data
-  * 139 Immune Traits (Transformed)
-  * Sample List (List used per analysis)
-  * Covariates
+  * GWAS Data
+  * Heritability Analysis Data
