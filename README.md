@@ -20,8 +20,6 @@ Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code con
 
 Code contained herein are meant as a guide and should be modified and adapted to match your server specifications and directories.
 
-Authors will not be available to assist with troubleshooting. Please familiarize yourself with the associated scripting languages, and contact your server admin for instructions on the proper format for submitting jobs to your compute cluster and to ensure all necessary programs are installed.
-
 
 ## Contents
 * Pre-HRC Imputed
