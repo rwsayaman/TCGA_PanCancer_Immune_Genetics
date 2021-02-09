@@ -1,0 +1,15 @@
+#!/bin/sh 
+#PBS -e /zivlab/data3/rsayaman/GitHub/TCGA_PanCancer_Immune_Genetics/Code/PreProcess_HRCImputed/log_report
+#PBS -o /zivlab/data3/rsayaman/GitHub/TCGA_PanCancer_Immune_Genetics/Code/PreProcess_HRCImputed/log_report
+
+## Set the job name
+#PBS -N qsub_py_format_info
+#PBS -l vmem=16gb
+#PBS -t 1-22
+
+# Run my job
+cd  /zivlab/data3/rsayaman/GitHub/TCGA_PanCancer_Immune_Genetics/Data/HRC_Imputed_Genotyping_Data
+
+python ../../Code/PreProcess_HRCImputed/Format_Impute_HRC_Info_chr$PBS_ARRAYID.py
+
+
