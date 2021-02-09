@@ -27,7 +27,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
       * Folder: "TCGA QC HRC Imputed Genotyping Data used by the AIM AWG (from Sayaman et al)"
         * Subfolder: "HRC Imputed Genotyping Data"
   * Download and read the READ_ME_4.txt file.
-  * Dowload contents of the folder, e.g. chr*.zip files into the ./GitHub/TCGA_Germline_Immune_Response/Data/HRC_Imputed_Genotyping_Data folder.
+  * Dowload contents of the folder -- e.g., chr*.zip files, into the ./GitHub/TCGA_PanCancer_Immune_Genetics/Data/HRC_Imputed_Genotyping_Data folder.
 
 
 ## Required Software
