@@ -26,7 +26,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 
 ## Required Software
-* plink (PLINK v1.90b5)
+* plink (PLINK v1.90b5): https://www.cog-genomics.org/plink/
 
 
 ## Contents
