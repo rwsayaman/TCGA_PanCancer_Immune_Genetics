@@ -1,4 +1,4 @@
-# TCGA_PanCancer_Germline_Immune
+# TCGA_Germline_Immune_Response
 
 Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
 
