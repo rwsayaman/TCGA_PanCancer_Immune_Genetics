@@ -28,6 +28,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
         * Subfolder: "HRC Imputed Genotyping Data"
   * Download and read the READ_ME_4.txt file.
   * Dowload contents of the folder -- e.g., chr*.zip files, into the github folder: ./GitHub/TCGA_PanCancer_Immune_Genetics/Data/HRC_Imputed_Genotyping_Data
+* Mapping of Birdseend file IDs and TCGA patient IDs: tcga_imputed_hrc1.1.updateid.TCGAID.txt
 
 
 ## Required Software
