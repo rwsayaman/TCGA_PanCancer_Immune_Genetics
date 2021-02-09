@@ -51,9 +51,9 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 4. Convert vcf chr*.rsq0.5.dose.vcf.gz files to plink tcga_imputed_hrc1.1_rsq0.5_chr*.bed files
     * qsub_convert_vcf_plink.txt - Generates tcga_imputed_hrc1.1_rsq0.5_chr*.bed, .bim, .fam plink files
 
-5. Make new SNP id for the plink bim file. Requires the Format_Create_NewMarkerID_for_Bim_chr1.py file.
+5. Make new SNP id for the PLINK bim file. Requires the Format_Create_NewMarkerID_for_Bim_chr1.py file.
     * qsub_make_py_format_snpid.txt - Generates a Format_Create_NewMarkerID_for_Bim_chr*.py per chr from Format_Create_NewMarkerID_for_Bim_chr1.py template
     * qsub_py_format_snpid.txt - Runs Format_Create_NewMarkerID_for_Bim_chr*.py files
 
-6. Update PLINK IIDs and FIDs from Birdseed file IDs to TCGA patient IDs. Requires the tcga_imputed_hrc1.1.updateid.TCGAID.txt file.
+6. Update IIDs and FIDs in the PLINK fam file from Birdseed file IDs to TCGA patient IDs. Requires the tcga_imputed_hrc1.1.updateid.TCGAID.txt file.
     * qsub_plink_update_ids.txt - Generates plink files with an updated tcga_imputed_hrc1.1_rsq0.5_TCGAID_chr*.fam file
