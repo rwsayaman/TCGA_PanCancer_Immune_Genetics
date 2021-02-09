@@ -48,7 +48,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
     * qsub_make_py_format_info.txt - Generates a Format_Impute_HRC_Info_chr*.py file per chr from Format_Impute_HRC_Info_chr1.py template
     * qsub_py_format_info.txt - Runs Format_Impute_HRC_Info_chr*.py files
 
-4. Convert vcf chr*.rsq0.5.dose.vcf.gz files to plink tcga_imputed_hrc1.1_rsq0.5_chr*.bed files
+4. Convert VCF chr*.rsq0.5.dose.vcf.gz files to PLINK tcga_imputed_hrc1.1_rsq0.5_chr*.bed files
     * qsub_convert_vcf_plink.txt - Generates tcga_imputed_hrc1.1_rsq0.5_chr*.bed, .bim, .fam plink files
 
 5. Make new SNP id for the PLINK bim file. Requires the Format_Create_NewMarkerID_for_Bim_chr1.py file.
