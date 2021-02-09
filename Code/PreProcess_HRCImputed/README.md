@@ -55,5 +55,5 @@ Authors will not be available to assist with troubleshooting. Please familiarize
     * qsub_make_py_format_snpid.txt - Generates a Format_Create_NewMarkerID_for_Bim_chr*.py per chr from Format_Create_NewMarkerID_for_Bim_chr1.py template
     * qsub_py_format_snpid.txt - Runs Format_Create_NewMarkerID_for_Bim_chr*.py files
 
-6. Update sample id from Birdseed file ids to TCGA patient IDs. Requires the tcga_imputed_hrc1.1.updateid.TCGAID.txt file.
+6. Update PLINK IIDs and FIDs from Birdseed file IDs to TCGA patient IDs. Requires the tcga_imputed_hrc1.1.updateid.TCGAID.txt file.
     * qsub_plink_update_ids.txt - Generates plink files with an updated tcga_imputed_hrc1.1_rsq0.5_TCGAID_chr*.fam file
