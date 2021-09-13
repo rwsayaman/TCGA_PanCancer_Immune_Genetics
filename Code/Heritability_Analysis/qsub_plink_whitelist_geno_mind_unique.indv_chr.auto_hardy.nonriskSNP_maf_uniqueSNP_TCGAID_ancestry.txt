@@ -1,0 +1,21 @@
+#!/bin/sh 
+#PBS -e /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_grm_unconstrained
+#PBS -o /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_grm_unconstrained
+
+## Set the job name
+#PBS -N plink_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry
+#PBS -l vmem=128gb
+#PBS -t 1
+
+# Run my job
+cd  /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_grm_unconstrained
+
+module load CBC plink/1.90b5.2
+# Separate by Ancestry Cluster
+plink --bfile ../Report_strand/v1.1_clean_TCGAID/TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID --keep TCGAID_Cluster1.EUR.8036.txt --make-bed --out ../Report_strand/v1.1_clean_TCGAID/TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster1.EUR
+
+plink --bfile ../Report_strand/v1.1_clean_TCGAID/TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID --keep TCGAID_Cluster2.ASIAN.605.txt --make-bed --out ../Report_strand/v1.1_clean_TCGAID/TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster2.ASIAN
+
+plink --bfile ../Report_strand/v1.1_clean_TCGAID/TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID --keep TCGAID_Cluster3.AFR.904.txt --make-bed --out ../Report_strand/v1.1_clean_TCGAID/TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster3.AFR
+
+plink --bfile ../Report_strand/v1.1_clean_TCGAID/TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID --keep TCGAID_Cluster4.AMR.222.txt --make-bed --out ../Report_strand/v1.1_clean_TCGAID/TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster4.AMR

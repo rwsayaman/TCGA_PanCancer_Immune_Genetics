@@ -1,0 +1,19 @@
+#!/bin/sh 
+#PBS -e /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_unconstrained
+#PBS -o /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_unconstrained
+
+## Set the job name
+#PBS -N grm.cutoff.0.05_greml_AMR.ImmunePheno216_CancerTypeSex.covar_PCA.AgeYears.qcovar
+#PBS -l vmem=64gb
+#PBS -l nodes=1:ppn=5:sse4
+#PBS -t 1-216
+
+# Run my job
+cd  /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_unconstrained
+
+
+module load CBC gcta/1.91.2beta
+
+# Ancestry Cluster 4 AMR, ImmunePheno216, covar cancer type & sex, qcovar PCA & Age Years 
+
+gcta64 --reml-no-constrain --grm TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster4.AMR_grm0_05 --pheno Immune.pheno.216.source.coded.TCGAID.9769.txt --mpheno $PBS_ARRAYID --covar CancerType.Sex.covar.txt --qcovar PCA.AgeYears.qcovar.txt --thread-num 5 --out grm.cutoff.0.05_greml_AMR.ImmunePheno216_CancerTypeSex.covar_PCA.AgeYears.qcovar/grm.cutoff.0.05_greml_AMR.ImmunePheno216_CancerTypeSex.covar_PCA.AgeYears.qcovar_ImmunePheno$PBS_ARRAYID

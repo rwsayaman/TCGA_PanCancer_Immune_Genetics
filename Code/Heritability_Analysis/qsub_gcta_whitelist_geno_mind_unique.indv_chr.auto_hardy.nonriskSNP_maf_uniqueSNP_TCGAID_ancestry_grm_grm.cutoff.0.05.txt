@@ -1,0 +1,26 @@
+#!/bin/sh 
+#PBS -e /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_unconstrained
+#PBS -o /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_unconstrained
+
+## Set the job name
+#PBS -N gcta_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry_grm_grm.cutoff.0.05
+#PBS -l vmem=64gb
+#PBS -l nodes=1:ppn=5:sse4
+#PBS -t 1
+
+# Run my job
+cd  /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/Report_GCTA_unconstrained
+
+
+module load CBC gcta/1.91.2beta
+
+# try other grm cutoffs with gtca
+
+gcta64 --grm TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster1.EUR --grm-cutoff 0.05 --make-grm --out TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster1.EUR_grm0_05
+
+gcta64 --grm TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster2.ASIAN --grm-cutoff 0.05 --make-grm --out TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster2.ASIAN_grm0_05
+
+gcta64 --grm TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster3.AFR --grm-cutoff 0.05 --make-grm --out TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster3.AFR_grm0_05
+
+gcta64 --grm TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster4.AMR --grm-cutoff 0.05 --make-grm --out TCGA.all.normal.merge_ZivLab.whitelist.10128_plink_splitx_imputesex_geno0_05_mind0_05_chr.auto_hardy_maf0_005_uniqueSNP_TCGAID.Cluster4.AMR_grm0_05
+
