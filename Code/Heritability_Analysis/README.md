@@ -36,7 +36,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 ## Workflow
 ### Heritability Analysis   
 
-Timing: 2 weeks 
+**Timing: 2 weeks** 
 
 Heritability analysis on 139 traits is conducted using a mixed-model approach implemented in genome-wide complex trait analysis (GCTA) with the genomic-relatedness-based restricted maximum-likelihood (GREML) method (Yang et al., 2010, 2011). This calculates the proportion of immune trait variation that is attributable to common genetic variants (% Heritability). Refer to the GCTA website for details (https://cnsgenomics.com/software/gcta) 
 
@@ -44,86 +44,86 @@ Heritability analysis on 139 traits is conducted using a mixed-model approach im
 
 1. Format immune trait input file: 
 
- i. Formatted input file of TCGA immune traits is provided in the [Sayaman, Saad et al., 2021] GitHub repository: 
+    i. Formatted input file of TCGA immune traits is provided in the [Sayaman, Saad et al., 2021] GitHub repository: 
 
-  * Immune.pheno.139.source.coded.TCGAID.9769.txt 
+        * Immune.pheno.139.source.coded.TCGAID.9769.txt 
 
 2. Identify genetic ancestry assignment of each individual and create a filtered sample list for each genetic ancestry cluster: 
 
- i. Ancestry assignments for each TCGA individual are provided in Table S1. TCGA Sample List Used in the Analysis from [Sayaman, Saad et al., 2021]. 
+    i. Ancestry assignments for each TCGA individual are provided in Table S1. TCGA Sample List Used in the Analysis from [Sayaman, Saad et al., 2021]. 
 
- ii. Formatted input file of TCGA patient barcodes assigned to each genetic ancestry cluster is provided in the [Sayaman, Saad et al., 2021] GitHub repository: 
+    ii. Formatted input file of TCGA patient barcodes assigned to each genetic ancestry cluster is provided in the [Sayaman, Saad et al., 2021] GitHub repository: 
 
-  * TCGAID_Cluster1.EUR.8036.txt 
+        * TCGAID_Cluster1.EUR.8036.txt 
 
-  * TCGAID_Cluster2.ASIAN.605.txt 
+        * TCGAID_Cluster2.ASIAN.605.txt 
 
-  * TCGAID_Cluster3.AFR.904.txt 
+        * TCGAID_Cluster3.AFR.904.txt 
 
-  * TCGAID_Cluster4.AMR.222.txt 
+        * TCGAID_Cluster4.AMR.222.txt 
 
 3. To conduct heritability analyses within each ancestry subgroup (NEuropean=7,813, NAfrican=863, NAsian=570, and NAmerican=209 individuals), subset individuals belonging to specified ancestry group from the filtered TCGA HRC imputed genotyping data in PLINK (--keep) using ancestry assignments. 
 
-  * plink --bfile [input file]  
+        * plink --bfile [input file]  
 
-  * --keep [ancestry cluster sample file list]  
+        * --keep [ancestry cluster sample file list]  
 
-  * --make-bed  
+        * --make-bed  
 
-  * --out [output filename] 
+        * --out [output filename] 
 
-  * See: " “qsub_plink_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry.txt " 
+        * See: " “qsub_plink_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry.txt " 
 
  
-Note: Analysis is automatically run on samples with complete data. A subset of the defined samples within each genetic ancestry cluster are automatically skipped due to missing data (e.g. immune trait or covariate values). 
+**Note:** Analysis is automatically run on samples with complete data. A subset of the defined samples within each genetic ancestry cluster are automatically skipped due to missing data (e.g. immune trait or covariate values). 
 
 
 4. Calculate genetic relatedness matrix in each ancestry group in GCTA: 
 
-  * gcta64 --bfile [input filename] 
+        * gcta64 --bfile [input filename] 
 
-  * --autosome  
+        * --autosome  
 
-  * --maf 0.01  
+        * --maf 0.01  
 
-  * --make-grm  
+        * --make-grm  
 
-  * --out [output filename]  
+        * --out [output filename]  
 
-  * --thread-num [numeric value for number of threads] 
+        * --thread-num [numeric value for number of threads] 
 
-  * See: "qsub_gcta_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry_grm.txt" 
+        * See: "qsub_gcta_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry_grm.txt" 
 
 5. Filter out individuals for relatedness (cut-off = 0.05), see: 
 
-  * gcta64 --grm [input filename]  
+        * gcta64 --grm [input filename]  
 
-  * --grm-cutoff 0.05  
+        * --grm-cutoff 0.05  
 
-  * --make-grm  
+        * --make-grm  
 
-  * --out [output filename] 
+        * --out [output filename] 
 
 6. Run GCTA GREML unconstrained (using default algorithm: Average Information) to estimate variance explained by SNPs with defined categorical and continuous covariates using the following parameters: 
 
-  * gcta64 --reml-no-constrain  
+        * gcta64 --reml-no-constrain  
 
-  * --grm [input filename]  
+        * --grm [input filename]  
 
-  * --pheno [immune trait matrix filename]  
+        * --pheno [immune trait matrix filename]  
 
-  * --mpheno [numeric index of immune trait in input matrix] 
+        * --mpheno [numeric index of immune trait in input matrix] 
 
-  * --covar [categorical covariates filename]  
+        * --covar [categorical covariates filename]  
 
-  * --qcovar [continous covariates filename] --thread-num [numeric value for number of threads] 
+        * --qcovar [continous covariates filename] --thread-num [numeric value for number of threads] 
 
-  *  --out [output filename] 
+        *  --out [output filename] 
 
-  * See: "qsub_grm.cutoff.0.05_greml_EUR.ImmunePheno216_CancerTypeSex.covar_PCA.AgeYears.qcovar.txt" 
+        * See: "qsub_grm.cutoff.0.05_greml_EUR.ImmunePheno216_CancerTypeSex.covar_PCA.AgeYears.qcovar.txt" 
 
  
-Note: 	Scripts used in this section are available at:  
+**Note:** 	Scripts used in this section are available at:  
 
 https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics 
 
