@@ -24,9 +24,9 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 
 ## Required Inputs
-* Sample files by ancestry
-* Covariate files
-* Immune traits (transformed)
+* Sample file list by genetic ancestry assignments for EUR, AFR, ASN and AMR clusters
+* Covariate files (caterogical and continuous)
+* Immune traits matrix (transformed)
 
 
 ## Required Software
