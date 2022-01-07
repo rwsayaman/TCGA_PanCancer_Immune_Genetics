@@ -46,6 +46,6 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
     f. Calculates immune signatures. Output variable: `ExprData.WolfSignatures`.
 
-    g. Performs either mean centering and scaling (sd) or median centering and scaling (sd) of the immune signatures. Output variable: `ExprData.WolfSignatures.meanCtrScl` or `ExprData.WolfSignatures.mdCtrScl`.
+    g. Performs either mean centering and scaling (i.e. standard deviations scaled to one) or median centering and scaling of the immune signatures. Output variable: `ExprData.WolfSignatures.meanCtrScl` or `ExprData.WolfSignatures.mdCtrScl`.
 
     h. Saves signatures and original gene symbols as .RData files to working directory. Ouput data: `ExprData.WolfSignatures.meanCtrScl` or `ExprData.WolfSignatures.mdCtrScl`, and `ExprData.WolfSignatures.GeneSYM`.
