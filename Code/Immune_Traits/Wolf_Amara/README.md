@@ -4,7 +4,7 @@
 
 Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
 
-Please additionally cite: Wolf et al., and Amara et al., when using code to calculate gene expression signatures from Wolf et al. and Amara et al.
+Please additionally cite: Wolf et al. PLoS ONE 2014 and Amara et al. Breast Cancer Res Treat 2017, when using code to calculate gene expression signatures from Wolf et al. and Amara et al.
 
 
 ## Citations
@@ -18,6 +18,8 @@ Please additionally cite: Wolf et al., and Amara et al., when using code to calc
 
 
 ## Description
+The workfflow and code provided calculates immune signatures from gene expression profiles as described in Wolf et al. PLoS ONE 2014, and Amara et al. Breast Cancer Res Treat 2017.
+
 Code contained herein are meant as a guide and should be modified and adapted to match your server specifications and directories.
 
 Authors will not be available to assist with troubleshooting. Please familiarize yourself with the associated scripting languages, and contact your server admin for instructions on the proper format for submitting jobs to your compute cluster and to ensure all necessary programs are installed.
