@@ -28,22 +28,24 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 
 ## Workflow
-1. Prepare ExprData gene expression matrix with gene symbols as rows and sample ids as columns in R.
+1. Prepare `ExprData` gene expression matrix with gene symbols as rows and sample ids as columns in R.
 
-2. Save ExprData gene expression matrix as a .RData file: ExprData.RData as input file for signature calculation.
+2. Set working directory and save `ExprData` gene expression matrix as a .RData file: `ExprData.RData` as input file for signature calculation.
 
-3. Set working directory and run the Calculate_Wolf_Signatures.R script. This takes ExprData.RData expression matrix file and performs the following:
+3. Run the `Calculate_Wolf_Signatures.R` script. This takes performs the following:
 
-    a. Performs median centering of the ExprData gene expression matrix. Ouput variable: ExprData.mdCtr.
+    a. Loads `ExprData.RData` expression matrix file from working directory. 
+    
+    b. Performs median centering of the `ExprData` gene expression matrix. Ouput variable: `ExprData.mdCtr`.
 
-    b. Maps the gene symbols to entrez ids using the org.Hs.eg.db database. Ouput column: EntrezID.
+    c. Maps the gene symbols to entrez ids using the org.Hs.eg.db database. Ouput column: `EntrezID`.
 
-    c. Filters and annotates the ExprData gene expression matrix based on entrez ids. Ouput variable: ExprData.mdCtr.filt.
+    d. Filters and annotates the `ExprData.mdCtr` gene expression matrix based on entrez ids. Ouput variable: `ExprData.mdCtr.filt`.
 
-    d. Prepares data for immune signature calculation. Output variable: ExprData.WolfSig.data2.mdCtr
+    e. Prepares data for immune signature calculation. Output variable: `ExprData.WolfSig.data2.mdCtr`
 
-    e. Calculates immune signatures. Output variable: ExprData.WolfSignatures.
+    f. Calculates immune signatures. Output variable: `ExprData.WolfSignatures`.
 
-    f. Performs either mean centering and scaling (sd) or median centering and scaling (sd) of the immune signatures. Output variable: ExprData.WolfSignatures.meanCtrScl or ExprData.WolfSignatures.mdCtrScl.
+    g. Performs either mean centering and scaling (sd) or median centering and scaling (sd) of the immune signatures. Output variable: `ExprData.WolfSignatures.meanCtrScl` or `ExprData.WolfSignatures.mdCtrScl`.
 
-    g. Saves signatures and original gene symbols a .RData file. Ouput data: ExprData.WolfSignatures.meanCtrScl or ExprData.WolfSignatures.mdCtrScl, and ExprData.WolfSignatures.GeneSYM.
+    h. Saves signatures and original gene symbols as .RData files to working directory. Ouput data: `ExprData.WolfSignatures.meanCtrScl` or `ExprData.WolfSignatures.mdCtrScl`, and `ExprData.WolfSignatures.GeneSYM`.
