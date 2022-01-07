@@ -28,6 +28,11 @@ center.rows2 <- function(x){
   return(t(apply(x, 1, function(x) (x - median(na.omit(x))))))
 }
 
+# # Mean center expression data
+# ExprData.mnCtr <- center.rows(ExprData)
+# dim(ExprData.mnCtr)
+
+# Median cenger expression data
 ExprData.mdCtr <- center.rows2(ExprData)
 dim(ExprData.mdCtr)
 
@@ -47,6 +52,7 @@ dim(ExprData.mdCtr)
 library(org.Hs.eg.db)
 keytypes(org.Hs.eg.db)
 
+# Map gene symbols to entrez IDs
 ExprData.mdCtr <- as.data.frame(ExprData.mdCtr)
 ExprData.mdCtr$ENTREZID <- unlist(mapIds(
   org.Hs.eg.db,
@@ -62,13 +68,15 @@ ExprData.mdCtr$ENTREZID <- unlist(mapIds(
 ########## FILTER AND ANNOTATE FOR ENTREZID ##########
 ###############################################################################
 
+# Filter data to remove gene symbols with no entrez IDs mapped
 ExprData.mdCtr.filt <- ExprData.mdCtr[!is.na(ExprData.mdCtr$ENTREZID), ]
 dim(ExprData.mdCtr.filt)
 
+# Create separate annotation matrix with gene symbols columns
 ExprData.mdCtr.filt.anno <- ExprData.mdCtr.filt
 ExprData.mdCtr.filt.anno$GeneSYM <- rownames(ExprData.mdCtr.filt)
 
-# Format Entrez ID names
+# Format data row names with formatted entrez ID names
 rownames(ExprData.mdCtr.filt.anno) <- paste0("eg_", ExprData.mdCtr.filt.anno$ENTREZID)
 rownames(ExprData.mdCtr.filt) <- paste0("eg_", ExprData.mdCtr.filt$ENTREZID)
 ExprData.mdCtr.filt$ENTREZID <- NULL
@@ -82,6 +90,8 @@ all(rownames(ExprData.mdCtr.filt.anno) == rownames(ExprData.mdCtr.filt))
 #####################################################################
 ##########  PREPARE DATA FUNCTION ##########
 #####################################################################
+
+# Prepare data for immune signature calculation
 
 
 ########## Load Wolf, Amara Coherent Representative Signatures ##########
@@ -127,7 +137,6 @@ length(Wolf_Amara_ImmuneGeneSigs.ls.ENTREZID)
 # [1] 2478
 
 
-
 ########## EVALUATE SIGNATURES ##########
 
 # Find all ENTREZID associated to immune sigs
@@ -147,7 +156,6 @@ prepareImmuneExpressionData.fxn <- function(expr.data, expr.data.ANNO.df, Immune
   
   length(unique(expr.data.ImmuneSig.ANNO.df$ENTREZID))
   length(unique(expr.data.ImmuneSig.ANNO.df$GeneSYM))
-  
   
   geneExp.V2_geneName_anno.df <- expr.data.ImmuneSig.ANNO.df
   geneExp.V2_geneName_entrezIDs <- geneExp.V2_geneName_anno.df[rownames(expr.data.ImmuneSig),]$ENTREZID
@@ -173,10 +181,8 @@ prepareImmuneExpressionData.fxn <- function(expr.data, expr.data.ANNO.df, Immune
 ExprData.WolfSig.data2.mdCtr <- prepareImmuneExpressionData.fxn(expr.data=ExprData.mdCtr.filt, 
                                                                   expr.data.ANNO.df=ExprData.mdCtr.filt.anno, 
                                                                   ImmuneSig.ENTREZID=ImmuneSig.ENTREZID)
-
 dim(ExprData.WolfSig.data2.mdCtr)
 # [1] 2326  348
-
 
 
 #####################################################################
@@ -260,7 +266,6 @@ calculate_Wolf_Amara_Signatures_fxn <- function(sigs.select, data2, expr.data.AN
   
   ##2#########################################
   ####next, evaluate the signatures calculated as the median expression level of genes in the signature
-  
   
   for(i in 1:length(sigs.select)){
     
@@ -474,13 +479,15 @@ calculate_Wolf_Amara_Signatures_fxn <- function(sigs.select, data2, expr.data.AN
 ##########  CALCULATE SIGNATURES ##########
 #####################################################################
 
+# Calculate immune signatures
 ExprData.WolfSignatures <- calculate_Wolf_Amara_Signatures_fxn(sigs.select=Wolf_Amara_ImmuneGeneSigs.ls, 
                                                           data2=ExprData.WolfSig.data2.mdCtr, 
                                                           expr.data.ANNO.df=ExprData.mdCtr.filt.anno)
 dim(ExprData.WolfSignatures)
-# [1]  68 348
 head(ExprData.WolfSignatures)
 
+
+# Center and scale immune signatures
 zscore.rows <- function(x){
   return(t(apply(x, 1, function(x) (x - mean(na.omit(x)))/sd(na.omit(x)))))
 }
@@ -506,9 +513,11 @@ ExprData.WolfSignatures.mdCtrScl <- round(zscore.rows2(ExprData.WolfSignatures),
 ########## SAVE SIGNATURES ##########
 ###############################################################################
 
+# Save immune signatures
 save(ExprData.WolfSignatures.meanCtrScl, file=file.path(getwd(), "ExprData.WolfSignatures.meanCtrScl.RData"))
 save(ExprData.WolfSignatures.mdCtrScl, file=file.path(getwd(), "ExprData.WolfSignatures.mdCtrScl.RData"))
 
+# Save immune signatures gene symbol to entrez ID map
 ExprData.WolfSignatures.GeneSYM <- ExprData.mdCtr.filt.anno[ExprData.mdCtr.filt.anno$ENTREZID %in% Wolf_Amara_ImmuneGeneSigs.ls.ENTREZID, c("GeneSYM", "ENTREZID")]
 rownames(ExprData.WolfSignatures.GeneSYM) <- NULL
 
