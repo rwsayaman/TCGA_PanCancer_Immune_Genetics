@@ -25,6 +25,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 ## Required Software
 * R (https://www.r-project.org/)
+* Bioconductor package: org.Hs.eg.db (https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html)
 
 
 ## Workflow
