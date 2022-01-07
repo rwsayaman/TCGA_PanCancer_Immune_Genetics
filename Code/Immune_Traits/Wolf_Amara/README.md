@@ -4,19 +4,16 @@
 
 Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
 
-Please additionally cite: Thorsson et al., Immunity 2018 when referencing the immune traits when using TCGA immune traits.
 Please additionally cite: Wolf et al., and Amara et al., when using code to calculate gene expression signatures from Wolf et al. and Amara et al.
 
 
 ## Citations
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
-* Thorsson et al., Immunity (2018). The Immune Landscape of Cancer. https://doi.org/10.1016/j.immuni.2018.03.023
 * Wolf et al., PLoS ONE (2014). Gene co-expression modules as clinically relevant hallmarks of breast cancer diversity. https://doi.org/10.1371/journal.pone.0088309
 * Amara et al., Breast Cancer Res Treat (2017). Co-expression modules identified from published immune signatures reveal five distinct immune subtypes in breast cancer.  https://doi.org/10.1007/s10549-016-4041-3
 
 ## Contributors
 * Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
-* Vesteinn Thorsson, Ph.D., Institute for Systems Biology
 * Denise Wolf, Ph.D., University of California, San Francisco
 
 
