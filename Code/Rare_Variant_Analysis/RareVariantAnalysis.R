@@ -1,6 +1,7 @@
 ## Mohamad Saad
 ## Qatar Computing Research Institute
 
+
 #  Read the phenotype file. It contains all traits and covariates (PC1-PC7, Age, Gender, Cancer Type, etc.).
 Pheno = read.csv("PhenoFile.csv",h=TRUE)
 
