@@ -41,6 +41,8 @@ Authors will not be available to assist with troubleshooting. Please familiarize
     b.	For calculation of immune traits in a new dataset, consult  (Thorsson et al., 2018) methods section describing methodologies and source papers for derivation of specific immune traits.	
             
     i. Code to generate gene expression signatures from (Wolf et al., 2014) (Amara et al., 2017) and single sample gene set enrichment signatures from (Bindea et al., 2013; Şenbabaoğlu et al., 2016) are provided as a resource.
+    
+    * Code for Wolf, Amara gene expression immune signatures: https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Immune_Traits/Wolf_Amara
             
     ii. Necessary transformation of immune trait values in TCGA for use in genetic analysis described below are annotated in (Sayaman et al., 2021)  (Table S2).
 
