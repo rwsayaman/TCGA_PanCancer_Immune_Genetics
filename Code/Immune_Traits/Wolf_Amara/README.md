@@ -13,8 +13,8 @@ Please additionally cite: Wolf et al. PLoS ONE 2014 and Amara et al. Breast Canc
 * Amara et al., Breast Cancer Res Treat (2017). Co-expression modules identified from published immune signatures reveal five distinct immune subtypes in breast cancer.  https://doi.org/10.1007/s10549-016-4041-3
 
 ## Contributors
-* Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
 * Denise Wolf, Ph.D., University of California, San Francisco
+* Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
 
 
 ## Description
