@@ -21,6 +21,7 @@ Please additionally cite: Thorsson et al., Immunity 2018 when referencing the im
 * Mohamad Saad, Ph.D., Qatar Computing Research Institute: msaad@hbku.edu.qa
 * Donglei Hu, Ph.D., University of California, San Francisco
 * Scott Huntsman, M.S., University of California, San Francisco
+* Denise M. Wolf, Ph.D., University of California, San Francisco
 
 ## Senior Authors
 * Davide Bedognetti, Ph.D., Sidra Medicine
@@ -29,13 +30,21 @@ Please additionally cite: Thorsson et al., Immunity 2018 when referencing the im
 
 ## Contents
 * Code
-  * Pre-Processing of HRC Imputed Genotyping Data
+  * Pre-processing of Imputed Data
+  * Immune Traits
   * Heritability Analysis
-  * GWAS
+  * Genome-Wide Association Study (GWAS)
+  * Epigenomic Analysis
+  * Expression and splicing quantitative trait locus analysis (eQTLs and sQTL)
+  * Colocalization with E-Caviar colocalization and manual curation of the expanded region
   * Rare Variant Analysis
-* Data
-  * GWAS Data
-  * Heritability Analysis Data
+* Data (Sayaman et al., Immunity 2021)
+  * Table S1
+  * Table S2
+  * Table S3
+  * Table S4
+  * Table S5
+  * Table S6
   
   
 ## Resources
