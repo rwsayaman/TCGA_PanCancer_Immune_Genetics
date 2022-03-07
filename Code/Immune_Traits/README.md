@@ -18,7 +18,7 @@ Please additionally cite: Wolf et al. PLoS ONE 2014, and Amara et al. Breast Can
 ## Contributors
 * Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
 * Vesteinn Thorsson, Ph.D., Institute for Systems Biology
-* Denise Wolf, Ph.D., University of California, San Francisco
+* Denise M. Wolf, Ph.D., University of California, San Francisco
 
 
 ## Description
