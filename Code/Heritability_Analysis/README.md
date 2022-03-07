@@ -1,15 +1,19 @@
 ## TCGA_PanCancer_Immune_Genetics
 
+Last updated: 03/07/2022
+
 ## Ancestry-specific Heritability Analysis: Genome-wide complex trait analysis (GCTA) using genome-based restricted maximum likelihood (GREML)
 
-Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
-
-Please additionally cite: Thorsson et al., Immunity 2018 when referencing the immune traits; and Carrot-Zhang et al., Cancer Cell 2020 when referencing ancestry assignments.
-
+Heritability analysis on 139 traits is conducted using a mixed-model approach implemented in genome-wide complex trait analysis (GCTA) with the genomic-relatedness-based restricted maximum-likelihood (GREML) method (Yang et al., 2010)(Yang et al., 2011). This calculates the proportion of immune trait variation that is attributable to common genetic variants (% Heritability). Refer to the GCTA website for details (https://cnsgenomics.com/software/gcta)
 
 ## Citations
+Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
+
+Please additionally cite: Thorsson et al., Immunity 2018 when referencing the immune traits.
 * Thorsson et al., Immunity (2018). The Immune Landscape of Cancer. https://doi.org/10.1016/j.immuni.2018.03.023
+
+Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing ancestry assignments.
 * Carrot-Zhang et al., Cancer Cell (2020). Comprehensive Analysis of Genetic Ancestry and Its Molecular Correlates in Cancer. https://doi.org/10.1016/j.ccell.2020.04.012
 
 
@@ -34,13 +38,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 
 ## Workflow
-### Heritability Analysis   
-
 **Timing: 2 weeks** 
-
-Heritability analysis on 139 traits is conducted using a mixed-model approach implemented in genome-wide complex trait analysis (GCTA) with the genomic-relatedness-based restricted maximum-likelihood (GREML) method (Yang et al., 2010, 2011). This calculates the proportion of immune trait variation that is attributable to common genetic variants (% Heritability). Refer to the GCTA website for details (https://cnsgenomics.com/software/gcta) 
-
- 
 
 1. Format immune trait input file: 
 
@@ -62,7 +60,7 @@ Heritability analysis on 139 traits is conducted using a mixed-model approach im
 
     * TCGAID_Cluster4.AMR.222.txt 
 
-3. To conduct heritability analyses within each ancestry subgroup (NEuropean=7,813, NAfrican=863, NAsian=570, and NAmerican=209 individuals), subset individuals belonging to specified ancestry group from the filtered TCGA HRC imputed genotyping data in PLINK (--keep) using ancestry assignments. 
+3. To conduct heritability analyses within each ancestry subgroup (NEuropean=7,813, NAfrican=863, NAsian=570, and NAmerican=209 individuals), subset individuals belonging to specified ancestry group from the QC'ed TCGA genotyping data in PLINK (--keep) using ancestry assignments. 
 
     * plink --bfile [input file]  
 
@@ -72,7 +70,7 @@ Heritability analysis on 139 traits is conducted using a mixed-model approach im
 
     * --out [output filename] 
 
-    * See: " “qsub_plink_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry.txt " 
+    * See: "qsub_plink_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry.txt" 
 
  
 **Note:** Analysis is automatically run on samples with complete data. A subset of the defined samples within each genetic ancestry cluster are automatically skipped due to missing data (e.g. immune trait or covariate values). 
@@ -103,6 +101,9 @@ Heritability analysis on 139 traits is conducted using a mixed-model approach im
     * --make-grm  
 
     * --out [output filename] 
+    
+    * See: "qsub_gcta_whitelist_geno_mind_unique.indv_chr.auto_hardy.nonriskSNP_maf_uniqueSNP_TCGAID_ancestry_grm_grm.cutoff.0.05.txt"
+
 
 6. Run GCTA GREML unconstrained (using default algorithm: Average Information) to estimate variance explained by SNPs with defined categorical and continuous covariates using the following parameters: 
 
@@ -120,15 +121,30 @@ Heritability analysis on 139 traits is conducted using a mixed-model approach im
 
     *  --out [output filename] 
 
-    * See: "qsub_grm.cutoff.0.05_greml_EUR.ImmunePheno216_CancerTypeSex.covar_PCA.AgeYears.qcovar.txt" 
+    * See: "qsub_grm.cutoff.0.05_greml_EUR.ImmunePheno139_CancerTypeSex.covar_PCA.AgeYears.qcovar.txt" to run heritability analysis on the EUR ancestry cluster; similar code is provided for the ASIAN, AFR and AMR ancestry clusters.
 
  
-**Note:** 	Scripts used in this section are available at:  
+**Critical:** Run heritability analysis unconstrained. This will produce heritability estimates (Vg/Vp) and standard deviations outside the 0 to 1 range. 
 
-https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics 
+7.	From GCTA GREML .hsq result file, extract the ratio of genetic variance to phenotypic variance (Vg/Vp), estimate and SE; the LRT p-value and sample size (n) for each immune trait.
 
- 
+8.	Concatenate heritability analysis results across all immune traits tested.
+   a.	Annotate each result file with the corresponding immune trait, immune category and immune module (See Table S2, (Sayaman et al., 2021);
+   b.	Append annotated result files from each immune trait.
+
+9.	Correct for multiple-hypothesis testing ancestry group by calculating the FDR p-value using the Benjamini-Hochberg adjustment method.
+
+10.	**Optional:** Visualize % heritability (Vg/Vp * 100) across all immune traits per ancestry group for exploratory data analysis.
+
+**Note:** 	See “PlotGRM.GREML.R”. 
+
+**Note:** Interactive visualization of heritability analysis from  (Sayaman et al., 2021) can be done in CRI iAtlas (https://www.cri-iatlas.org/), in the “Germline Analysis” module (See the "Interactive visualization of results" section of "Expected Outcomes").
+
 
 ### Limitations 
 
-For immune traits heritability estimates run via GCTA GREML, the GCTA FAQ (https://cnsgenomics.com/software/gcta/#FAQ) states that at least 3,160 samples from unrelated individuals are needed to get estimates with standard errors (SEs) down to 0.1 for common SNPs. Only the European ancestry group meets this criteria. Nonetheless, heritability estimates were run in the smaller sized ancestry groups with expectation of large SEs to provide preliminary analyses of immune traits in ancestry groups that are not well studied or sampled. 
+For immune traits heritability estimates run via GCTA GREML, the GCTA FAQ (https://cnsgenomics.com/software/gcta/#FAQ) states that at least 3,160 samples from unrelated individuals are needed to get estimates with standard errors (SEs) down to 0.1 for common SNPs. Only the European ancestry group meets this criteria. Nonetheless, heritability estimates were run in the smaller sized ancestry groups with expectation of large SEs to provide preliminary analyses of immune traits in ancestry groups that are not well studied or sampled.
+
+Heritability analysis takes into account only common variants. Contribution of rare variants are not accounted for and may explain “missing’ heritability. 
+
+
