@@ -141,16 +141,16 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 **Note:** Interactive visualization of heritability analysis from  (Sayaman et al., 2021) can be done in CRI iAtlas (https://www.cri-iatlas.org/), in the “Germline Analysis” module (See the "Interactive visualization of results" section of "Expected Outcomes").
 
 
-### Limitations 
+## Limitations 
 
 For immune traits heritability estimates run via GCTA GREML, the GCTA FAQ (https://cnsgenomics.com/software/gcta/#FAQ) states that at least 3,160 samples from unrelated individuals are needed to get estimates with standard errors (SEs) down to 0.1 for common SNPs. Only the European ancestry group meets this criteria. Nonetheless, heritability estimates were run in the smaller sized ancestry groups with expectation of large SEs to provide preliminary analyses of immune traits in ancestry groups that are not well studied or sampled.
 
 Heritability analysis takes into account only common variants. Contribution of rare variants are not accounted for and may explain “missing’ heritability.
 
 
-### Troubleshooting
+## Troubleshooting
 
-#### Problem:
+### Problem:
 
 Cannot load software or run scripts on the high-performance compute server. Implementation of provided GitHub code produces error.
 
@@ -165,7 +165,7 @@ For reference, heritability analysis in Sayaman et al., Immunity 2021 was run in
 For troubleshooting of heritability analysis in GCTA GREML, see: https://cnsgenomics.com/software/gcta. For troubleshooting of GWAS in PLINK, see https://www.cog-genomics.org/plink/. For issues with installation of iAtlas , see troubleshooting guide on the software website https://github.com/CRI-iAtlas/iatlas-app.
 
 
-#### Problem:
+### Problem:
 
 In performing heritability analysis, filtering of individuals based on the genetic relatedness matrix is confounded by sample stratification based on genetic ancestry.
 
@@ -174,7 +174,7 @@ In performing heritability analysis, filtering of individuals based on the genet
 Heritability analysis should be done within each genetic ancestry cluster as genetic ancestry creates population stratification.
 
 
-#### Problem:
+### Problem:
 
 Heritability estimates do not converge.
 
