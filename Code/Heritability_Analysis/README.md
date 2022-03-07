@@ -150,6 +150,12 @@ Heritability analysis takes into account only common variants. Contribution of r
 
 ### Troubleshooting
 
+#### Problem:
+
+Cannot load software or run scripts on the high-performance compute server. Implementation of provided GitHub code produces error.
+
+#### Potential solution: 
+
 Consult your institution’s IT or compute cluster administrator for proper installation of necessary software including all need libraries based on the high-performance compute environment. Ensure that the proper software versions, including all libraries and dependencies, are installed. Software implementation may be version specific, the versions used in the protocol are provided to ensure reproducibility. 
 
 Job submission scripts are dependent on the resource allocation management system. Provided code should be considered as a guide. Adjust parameters based on cluster capabilities and specifications. Job submission scripts are dependent on the resource allocation management system. E.g. the provided GitHub codes for heritability analysis and GWAS were optimized for the high-performance compute environment at University of California, San Francisco employing Portable Batch System (PBS) job scheduling; consult your system administrator to adapt the provided code to your system. 
@@ -157,5 +163,23 @@ Job submission scripts are dependent on the resource allocation management syste
 For reference, heritability analysis in Sayaman et al., Immunity 2021 was run in the original UCSF high-performance compute environment TIPCC HPC cluster (now C4) which had 8 communal compute nodes and 1 dedicated node, each with 12 to 64 cores (Each node had from  64 to 512 GiB of RAM and at least 1.8 TiB of fast local disk space).
 
 For troubleshooting of heritability analysis in GCTA GREML, see: https://cnsgenomics.com/software/gcta. For troubleshooting of GWAS in PLINK, see https://www.cog-genomics.org/plink/. For issues with installation of iAtlas , see troubleshooting guide on the software website https://github.com/CRI-iAtlas/iatlas-app.
+
+
+#### Problem:
+
+In performing heritability analysis, filtering of individuals based on the genetic relatedness matrix is confounded by sample stratification based on genetic ancestry.
+
+#### Potential solution: 
+
+Heritability analysis should be done within each genetic ancestry cluster as genetic ancestry creates population stratification.
+
+
+#### Problem:
+
+Heritability estimates do not converge.
+
+#### Potential solution: 
+
+Heritability estimates do not converge when sample sizes are insufficient to build predictors; exclude groups with small samples sizes from analysis.
 
 
