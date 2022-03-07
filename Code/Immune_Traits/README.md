@@ -2,16 +2,16 @@
 
 ## Immune Traits
 
-Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
-
-Please additionally cite: Thorsson et al., Immunity 2018 when referencing the immune traits when using TCGA immune traits.
-
-Please additionally cite: Wolf et al. PLoS ONE 2014, and Amara et al. Breast Cancer Res Treat 2017, when using code to calculate gene expression signatures from Wolf et al. and Amara et al.
-
+139 immune traits were curated from (Thorsson et al., 2018) for analysis. Immune Trait categories were defined based on the methodological source of the data. Immune trait functional modules were defined based on Pearson correlation analysis.![image](https://user-images.githubusercontent.com/563466/157128341-e34c5ab5-1a36-44aa-9421-0b1dcc8fe801.png)
 
 ## Citations
+Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
+
+Please additionally cite: Thorsson et al., Immunity 2018 when referencing the immune traits when using TCGA immune traits.
 * Thorsson et al., Immunity (2018). The Immune Landscape of Cancer. https://doi.org/10.1016/j.immuni.2018.03.023
+
+Please additionally cite: Wolf et al. PLoS ONE 2014, and Amara et al. Breast Cancer Res Treat 2017, when using code to calculate gene expression signatures from Wolf et al. and Amara et al.
 * Wolf et al., PLoS ONE (2014). Gene co-expression modules as clinically relevant hallmarks of breast cancer diversity. https://doi.org/10.1371/journal.pone.0088309
 * Amara et al., Breast Cancer Res Treat (2017). Co-expression modules identified from published immune signatures reveal five distinct immune subtypes in breast cancer.  https://doi.org/10.1007/s10549-016-4041-3
 
