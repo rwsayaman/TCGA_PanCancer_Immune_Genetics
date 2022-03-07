@@ -1,5 +1,7 @@
 ## TCGA_PanCancer_Immune_Genetics
 
+Last update: 03/07/2022
+
 ## Immune Traits
 
 139 immune traits were curated from (Thorsson et al., 2018) for analysis. Immune Trait categories were defined based on the methodological source of the data. Immune trait functional modules were defined based on Pearson correlation analysis.
