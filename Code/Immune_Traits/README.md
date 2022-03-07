@@ -2,7 +2,7 @@
 
 ## Immune Traits
 
-139 immune traits were curated from (Thorsson et al., 2018) for analysis. Immune Trait categories were defined based on the methodological source of the data. Immune trait functional modules were defined based on Pearson correlation analysis.![image](https://user-images.githubusercontent.com/563466/157128341-e34c5ab5-1a36-44aa-9421-0b1dcc8fe801.png)
+139 immune traits were curated from (Thorsson et al., 2018) for analysis. Immune Trait categories were defined based on the methodological source of the data. Immune trait functional modules were defined based on Pearson correlation analysis.
 
 ## Citations
 Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
