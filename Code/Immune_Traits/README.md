@@ -52,3 +52,6 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 3.	Cluster correlation matrix using complete agglomerative clustering method using (1-correlation) as distance metric.
 a.	Generate heatmap with clustering dendrogram using heatmap.2 function in gplots R package or similar algorithm.
 4.	Identify highly correlated blocks (dendrogram clusters) of immune-traits to generate immune functional modules.
+
+<b>Note:<\b> 	See script used in this section "ImmunePheno139.Cibersort.continuous_cor.pearson.R" and associated figures generated in the "Figures" folder.
+
