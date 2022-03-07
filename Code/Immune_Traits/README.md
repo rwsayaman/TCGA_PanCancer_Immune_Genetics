@@ -55,3 +55,8 @@ a.	Generate heatmap with clustering dendrogram using heatmap.2 function in gplot
 
 **Note:** 	See script used in this section "ImmunePheno139.Cibersort.continuous_cor.pearson.R" and associated figures generated in the "Figures" folder.
 
+
+### Limitations
+ 
+Immune signatures lack cancer-specific cell type resolution. The majority of immune traits were calculated based on specific gene sets from expression data (RNA-sequencing) from bulk tissue to generate estimates of immune cell activation or abundance using different enrichment or deconvolution techniques. Caution should be exercised when interpreting results in the context of specific tumors or cell types. However, many of these signatures were validated in specific tissues and cancers via FACS sorting or immunohistochemistry/immunofluorescence imaging of immune populations.
+
