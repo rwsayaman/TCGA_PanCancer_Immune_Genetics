@@ -50,6 +50,8 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
   * Table S4
   * Table S5
   * Table S6
+  * TCGA QC and HRC Imputed Genotyping Data
+  * VEP Annotation
   
   
 ## Resources
