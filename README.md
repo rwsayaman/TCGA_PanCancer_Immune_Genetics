@@ -34,17 +34,25 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
 
 
 ## Contents
-* [**Data Download**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data) 
-  * Supplementary Tables (Sayaman et al., Immunity 2021)
-    * Table S1
-    * Table S2
-    * Table S3
-    * Table S4
-    * Table S5
-    * Table S6
+* [Apply for dbGaP Authorization](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/dbGaP)
+
+* [**Software Installation**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Software)
+  * PLINK
+  * GCTA GREML
+  * R/Bioconductor
+  * LocusZoom
+  * eCAVIAR
+  
+* [**Download Datasets**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data) 
+  * Sample List (Sayaman et al., Immunity 2021)
+  * Immune Traits (Sayaman et al., Immunity 2021)
   * [TCGA QC and HRC Imputed Genotyping Data](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data/QC_HRC_Imputed_Genotyping_Data)
+  * TCGA Whole Exome Sequencing Data
+  * GTEx Data
   * [VEP Annotation](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data/VEP_Annotation)
-* [**Code**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code)
+  * Roadmap Epigenomics Project Epigenomic State Model
+
+* [**Analysis Code**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code)
   * [Pre-processing of Imputed Data](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/PreProcess_HRCImputed)
   * [Immune Traits](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Immune_Traits)
   * [Heritability Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Heritability_Analysis)
