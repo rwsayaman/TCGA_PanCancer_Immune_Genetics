@@ -83,7 +83,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
     vii.	Optional: Visualize results by plotting the GTEx eQTL -log10 FDR p-value against the distance from the TSS (“tss_distance”).
 
-    **Note:** See: “GTEx.eQTL.all.assoc_processResults_GWAS.sugg.SNPs_extended.r” and “GTEx.eQTL.all.assoc_processResults_GWAS.sugg.SNPs_extended_plot.r” scripts.
+    **Note:** See: “GTEx.eQTL.all.assoc_processResults_GWAS.sugg.SNPs_extended.r” and “GTEx.eQTL.all.assoc_processResults_GWAS.sugg.SNPs_1mb_extended_plot.r” scripts.
 
 
     c.	sQTL
