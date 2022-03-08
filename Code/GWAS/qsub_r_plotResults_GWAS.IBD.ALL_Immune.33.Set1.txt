@@ -1,0 +1,14 @@
+#!/bin/sh
+#PBS -e /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/GWAS
+#PBS -o /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/GWAS
+
+## Set the job name
+#PBS -N r_plotResults_GWAS.IBD.ALL_Immune.33.Set1
+#PBS -l nodes=1:ppn=5 -l feature=n31 -l vmem=32gb
+#PBS -t 1
+
+# Run my job
+cd /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/GWAS
+
+module load CBC gcc r/3.5.3
+R CMD BATCH r_plotResults_GWAS.IBD.ALL_Immune.33.Set1.r
