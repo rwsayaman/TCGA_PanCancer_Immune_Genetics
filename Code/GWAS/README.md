@@ -98,7 +98,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 **Note:** Interactive visualization of GWAS from  (Sayaman et al., 2021) can be done in CRI iAtlas (https://www.cri-iatlas.org/), in the "Germline Analysis" module or using the PheWeb tool (See the "Interactive visualization of results" section).
 
-19.	Optional: Each SNP can be further annotated (See Table S4, (Sayaman et al., 2021)) with: 
+19.	**Optional:** Each SNP can be further annotated (See Table S4, (Sayaman et al., 2021)) with: 
 
     a.	The Minimac 3 HRC imputation information for each SNP (extracted from the filtered chr*.info.rsq0.5.gz), including whether SNP was genotyped or imputed (Genotyped), the estimated value of the squared correlation between imputed genotypes and true, unobserved genotypes (Rsq), the average probability of observing the most likely allele for each haplotype (AvgCall), minor allele frequency of the variant in the imputed data (MAF) (https://genome.sph.umich.edu/wiki/Minimac3_Info_File);
     
