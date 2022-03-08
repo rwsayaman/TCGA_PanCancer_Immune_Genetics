@@ -15,7 +15,7 @@ Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code con
 
 ## Contents
 
-* Data Download 
+* **Data Download** 
   * Supplementary Tables (Sayaman et al., Immunity 2021)
     * Table S1
     * Table S2
