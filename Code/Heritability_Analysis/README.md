@@ -28,9 +28,16 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 
 ## Required Inputs
-* Sample file list by genetic ancestry assignments for EUR, AFR, ASN and AMR clusters
-* Covariate files (caterogical and continuous)
-* Immune traits matrix (transformed)
+* QC TCGA genotyping data in plink format
+* Sample file list by genetic ancestry assignments for ancestry clusters:
+    *  EUR: TCGAID_Cluster1.EUR.8036.txt
+    *  ASIAN: TCGAID_Cluster2.ASIAN.605.txt 
+    *  AFR: TCGAID_Cluster3.AFR.904.txt
+    *  AMR: TCGAID_Cluster4.AMR.222.txt
+* Covariate files: 
+    *  Caterogical (cancer type, curated germline-imputed sex assignment):CancerType.Sex.covar.txt
+    *  Continuous (age at diagnosis, germline-based ancestry PCA): PCA.AgeYears.qcovar.txt
+* Immune traits matrix (transformed): Immune.pheno.139.source.coded.TCGAID.9769.txt
 
 
 ## Required Software
@@ -129,8 +136,10 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 7.	From GCTA GREML .hsq result file, extract the ratio of genetic variance to phenotypic variance (Vg/Vp), estimate and SE; the LRT p-value and sample size (n) for each immune trait.
 
 8.	Concatenate heritability analysis results across all immune traits tested.
-   a.	Annotate each result file with the corresponding immune trait, immune category and immune module (See Table S2, (Sayaman et al., 2021);
-   b.	Append annotated result files from each immune trait.
+    
+    a.	Annotate each result file with the corresponding immune trait, immune category and immune module (See Table S2, (Sayaman et al., 2021);
+    
+    b.	Append annotated result files from each immune trait.
 
 9.	Correct for multiple-hypothesis testing ancestry group by calculating the FDR p-value using the Benjamini-Hochberg adjustment method.
 
@@ -138,7 +147,14 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 **Note:** 	See “PlotGRM.GREML.R”. 
 
-**Note:** Interactive visualization of heritability analysis from  (Sayaman et al., 2021) can be done in CRI iAtlas (https://www.cri-iatlas.org/), in the “Germline Analysis” module (See the "Interactive visualization of results" section of "Expected Outcomes").
+**Note:** Interactive visualization of heritability analysis from  (Sayaman et al., 2021) can be done in CRI iAtlas (https://www.cri-iatlas.org/), in the “Germline Analysis” module (See the "Interactive visualization of results" section).
+
+
+## Expected Outcomes
+
+Output files from GCTA GREML is an .hsq file. For complete description of output variables, see: https://cnsgenomics.com/software/gcta/#GREMLanalysis. The combined results table include the genetic variance to phenotypic variance (Vg/Vp), estimate and SE; the LRT p-value and sample size (n) for each immune trait; and the FDR p-value across all immune traits.
+
+After conducting heritability analysis across 139 immune traits, we identified 10 immune traits with significant heritability (FDR p < 0.05), and 23 other traits with nominally significant heritability (p < 0.05) in at least one ancestry group. Within the European ancestry group, 28 traits had at least nominally significant heritability. (See Table S3, (Sayaman et al., 2021)).
 
 
 ## Limitations 
