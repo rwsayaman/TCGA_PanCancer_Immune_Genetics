@@ -70,7 +70,8 @@ Authors will not be available to assist with troubleshooting. Please familiarize
     * --covar [covar.GWAS.IBD.ALL.txt] 
     * --linear hide-covar 
     * --out [output filename]
-    * See script: "qsub_plink_linear_GWAS.IBD.ALL_Immune.33.Wolf.Set1.txt"
+    * See script: "qsub_plink_linear_GWAS.IBD.ALL_Immune.33.Wolf.Set1.txt" as an example.
+    **Note:** The Immune.phenotype.txt file was divided into batches or sets of 5 traits that were ran in parallel. 
 
 16.	Run logistic regression on binarized discrete immune traits in PLINK:
     * --logistic
