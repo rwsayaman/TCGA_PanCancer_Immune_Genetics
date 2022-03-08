@@ -7,9 +7,11 @@ Last updated: 03/07/2022
 This section describes the mapping of genome-wide significant and suggestive SNPs to the Roadmap Epigenomics Project Epigenomic Expanded 18-state model which uses 6 marks across 98 epigenomes:  https://egg2.wustl.edu/roadmap/web_portal/chr_state_learning.html#exp_18state 
 (Roadmap Epigenomics Consortium et al., 2015)
 
+
 ## Citations
 Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
+
 
 ## Contributors
 * Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
@@ -25,6 +27,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 ## Required Inputs
 * Filtered GWAS Summary Statistics (genome-wide significant p < 5x10-8 and suggestive p < 1x10-6)
 * Roadmap Epigenomics Project Expanded 18-state model (6 marks, 98 epigenomes) for Build GRCh37/hg19: https://egg2.wustl.edu/roadmap/web_portal/chr_state_learning.html#exp_18state
+
 
 ## Required Software
 * R (https://www.r-project.org/)
@@ -50,7 +53,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 26.	Manually curate immune-associated epigenomes via cell type or tissue of origin (Sayaman et al., 2021) (Table S4).
 
-Note: 	Scripts used in this section are available, see the “MapEpigeneticState_ImmuneGermlineSNPs.R” script.
+**Note:** 	Scripts used in this section are available, see the “MapEpigeneticState_ImmuneGermlineSNPs.R” script.
 
 
 
