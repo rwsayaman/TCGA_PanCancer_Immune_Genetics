@@ -92,7 +92,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
     *	Run the Linux bash script “run_split_sqtl.sh”.  Each GTEx sQTL file is very large.  This step separates the large GTEx sQTL file into a number of small files.  The input of this script is a list of file names for GTEx sQTL.  Each line of this input file is a file name for GTEx sQTL.  The script generates a number of small files for each original GTEx sQTL file.
 
-    *	Run the R “script r_extract.txt”.  This script takes 2 input files.  One is an R object for GWAS suggestively significant variants.  The other input file is the GTEx sQTL file generated from the previous step.  The output is an R object of GTEx sQTL for suggestively significant variants.
+    *	Run the R script “r_extract.txt”.  This script takes 2 input files.  One is an R object for GWAS suggestively significant variants.  The other input file is the GTEx sQTL file generated from the previous step.  The output is an R object of GTEx sQTL for suggestively significant variants.
 
     ii.	Concatenate filtered GTEx sQTL files from each tissue corresponding to the GWAS suggestively significant variants 
 
