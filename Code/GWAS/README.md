@@ -83,11 +83,13 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 **Note:** .bed, .bim and .bim input files are provided separately in the sample code because SNP ID names from the original HRC imputed dataset were renamed with alleles listed in alphabetical order to assist matching with other datasets. This only affects the SNP ID name and not the encoding of the A1 and A2 alleles in PLINK which is maintained.
 
 17.	Filter resulting summary statistics from PLINK based on test p-values (P in PLINK). Genome-wide significance was defined at p < 5x10-8 and suggestive significance at p < 1x10-6 in our study.
+    
     * See code: "r_plotResults_GWAS.IBD.ALL_Immune.*.r"
 
 18.	Optional: Visualize results for exploratory data analysis: 
 
     a.	Manhattan plot, plotting GWAS -log10 p-value against the base pair position per chromosome;
+    
     * See code: "r_plotResults_GWAS.IBD.ALL_Immune.*.r"
 
     b.	QQplot, plotting the quantile distribution of observed P values for each SNP against expected values from a theoretical χ2-distribution; calculate the genomic inflation factor (lamba), the median of the χ2 test statistics divided by the expected median of the χ2 distribution.
@@ -97,8 +99,22 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 **Note:** Interactive visualization of GWAS from  (Sayaman et al., 2021) can be done in CRI iAtlas (https://www.cri-iatlas.org/), in the "Germline Analysis" module or using the PheWeb tool (See the "Interactive visualization of results" section).
 
 19.	Optional: Each SNP can be further annotated (See Table S4, (Sayaman et al., 2021)) with: 
+
+    a.	The Minimac 3 HRC imputation information for each SNP (extracted from the filtered chr*.info.rsq0.5.gz), including whether SNP was genotyped or imputed (Genotyped), the estimated value of the squared correlation between imputed genotypes and true, unobserved genotypes (Rsq), the average probability of observing the most likely allele for each haplotype (AvgCall), minor allele frequency of the variant in the imputed data (MAF) (https://genome.sph.umich.edu/wiki/Minimac3_Info_File);
     
-    a.	Map the genomic chromosome and base pair position to corresponding SNP rsIDs and IUPAC nucleotide ambiguity codes using the R SNPlocs.Hsapiens.dbSNP144.GRCh37 package (https://www.rdocumentation.org/packages/BSgenome/versions/1.40.1/topics/SNPlocs-class); 
+    i.	Map the Minimac 3 HRC imputation information to the GWAS summary stats using the variant identifier.
+    
+    * See code: "r_plotResults_GWAS.IBD.ALL_Immune.*.r"
+
+    b.	The recalculated minor allele frequency, MAF for the GWAS study set, n=9,603 (--freq in Step 8). This is done as the MAF from Minimac 3 HRC imputation information is derived from the full TCGA dataset, whereas individuals used in this GWAS study was further filtered for non-hematologic cancers only and with closely related individuals excluded (by Identity-by-Descent (IBD) in Step 7);
+        
+    i.	Map the recalculated MAF to the GWAS summary stats using the variant identifier.
+    
+    ii.	Filter summary statistics to exclude SNPs with recalculated MAF < 0.005.
+    
+    * See code: "r_plotResults_GWAS.IBD.ALL_Immune.*.r"
+
+    c.	Map the genomic chromosome and base pair position to corresponding SNP rsIDs and IUPAC nucleotide ambiguity codes using the R SNPlocs.Hsapiens.dbSNP144.GRCh37 package (https://www.rdocumentation.org/packages/BSgenome/versions/1.40.1/topics/SNPlocs-class); 
     
     i.	Transform GWAS results chromosome and base pair position into a GRanges object using the R Genomic Ranges package;
     
@@ -106,24 +122,10 @@ Authors will not be available to assist with troubleshooting. Please familiarize
     
     iii.	Overlap the GRange chromosome and base pair position with the SNPlocs.Hsapiens.dbSNP144.GRCh37 dataset using the "snpsByOverlaps" function;
     iv.	Merge annotated data with results file.
+    
     * See code: "r_annotation_SNP.r"
     
     **Note:** Not all SNPs have corresponding rsIDs.
-
-
-    b.	The Minimac 3 HRC imputation information for each SNP (extracted from the filtered chr*.info.rsq0.5.gz), including whether SNP was genotyped or imputed (Genotyped), the estimated value of the squared correlation between imputed genotypes and true, unobserved genotypes (Rsq), the average probability of observing the most likely allele for each haplotype (AvgCall), minor allele frequency of the variant in the imputed data (MAF) (https://genome.sph.umich.edu/wiki/Minimac3_Info_File);
-    
-    i.	Map the Minimac 3 HRC imputation information to the GWAS summary stats using the variant identifier.
-    
-    * See code: "r_plotResults_GWAS.IBD.ALL_Immune.*.r"
-
-    c.	The recalculated minor allele frequency, MAF for the GWAS study set, n=9,603 (--freq in Step 8). This is done as the MAF from Minimac 3 HRC imputation information is derived from the full TCGA dataset, whereas individuals used in this GWAS study was further filtered for non-hematologic cancers only and with closely related individuals excluded (by Identity-by-Descent (IBD) in Step 7);
-        
-    i.	Map the recalculated MAF to the GWAS summary stats using the variant identifier.
-    
-    ii.	Filter summary statistics to exclude SNPs with recalculated MAF < 0.005.
-    
-    * See code: "r_plotResults_GWAS.IBD.ALL_Immune.*.r"
 
     d.	The nearest genes to SNP of interest (e.g. +/-50KB, +/-500KB, +/- 1000KB) using R snplist package to map rsID to gene maps extracted via the R biomaRt package using host grch37.ensembl.org (https://uswest.ensembl.org/info/data/biomart/index.html);
         
@@ -138,6 +140,9 @@ Authors will not be available to assist with troubleshooting. Please familiarize
     e.	VEP Impact and Symbol annotation from the downloaded VEP annotation file (See Download Datasets section).
     
     i.	Map the VEP annotation file (“VEP_MS_improved.csv” to the GWAS summary stats using chromosome and base pair position.
+    
+    * See code: "r_annotation_SNP.r"
+
 
 20.	Concatenate GWAS filtered (and annotated) summary stats across all immune traits tested.
 
