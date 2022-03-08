@@ -66,7 +66,8 @@ Authors will not be available to assist with troubleshooting. Please familiarize
     b.	eQTL
 
     i.	From each tissue type, extract only GTEx eQTL SNP results that match the GWAS SNP GRCh38 chromosome and base pair position. The output is an R object of GTEx eQTL for suggestively significant variants.
-Note: See: “GTEx.eQTL.all.assoc_extract_GWAS.sugg.SNPs.server.r” script.
+
+    **Note:** See: “GTEx.eQTL.all.assoc_extract_GWAS.sugg.SNPs.server.r” script.
 
     ii.	Concatenate filtered GTEx eQTL files from each tissue corresponding to the GWAS suggestively significant variants 
 
