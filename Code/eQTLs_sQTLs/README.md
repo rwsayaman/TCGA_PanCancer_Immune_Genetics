@@ -81,7 +81,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
     vi.	Extract GTEx eQTL results for variant-gene pairs with an FDR < 0.05 in at least one tissue. Exclude the HLA and IL17R locus which are simple eQTLs.
 
-    vii.	Optional: Visualize results by plotting the GTEx eQTL -log10 FDR p-value against the distance from the TSS (“tss_distance”).
+    vii. **Optional:** Visualize results by plotting the GTEx eQTL -log10 FDR p-value against the distance from the TSS (“tss_distance”).
 
     **Note:** See: “GTEx.eQTL.all.assoc_processResults_GWAS.sugg.SNPs_extended.r” and “GTEx.eQTL.all.assoc_processResults_GWAS.sugg.SNPs_1mb_extended_plot.r” scripts.
 
@@ -108,9 +108,9 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
     vi.	Merge with Immune-Germline SNP annotation.
 
-    vii.	Extract GTEx sQTL results for variant-gene pairs with an FDR < 0.05 in at least one tissue. Exclude the HLA and IL17R locus which are simple eQTLs.
+    vii. Extract GTEx sQTL results for variant-gene pairs with an FDR < 0.05 in at least one tissue. Exclude the HLA and IL17R locus which are simple eQTLs.
 
-    viii.	**Optional:** Visualize results by plotting the GTEx sQTL -log10 FDR p-value against the distance from the TSS (“tss_distance”).
+    viii. **Optional:** Visualize results by plotting the GTEx sQTL -log10 FDR p-value against the distance from the TSS (“tss_distance”).
 
     **Note:** See: “GTEx.sQTL.all.assoc_processResults_GWAS.sugg.SNPs_500kb _extended.r” and “GTEx.sQTL.all.assoc_processResults_GWAS.sugg.SNPs_500kb_extended_plot” scripts.
 
