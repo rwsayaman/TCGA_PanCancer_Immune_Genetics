@@ -40,7 +40,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 ## Workflow
 **Timing: 4 Weeks**
 
-11.	Perform Identity-by-Descent (IBD) analysis in PLINK and filter individuals out for relatedness (pihat < 0.25). This leaves 9,603 unrelated individuals in the TCGA cohort in the output file: 
+11.	Perform Identity-by-Descent (IBD) analysis in PLINK in each ancestry cluster and filter individuals out for relatedness (pihat < 0.25). This leaves 9,603 unrelated individuals in the TCGA cohort in the output file: 
     * GWAS.IBD.ALL.TCGAID.txt
 
 12.	Recalculate allele frequencies in PLINK for the subset of individuals used in the analysis in PLINK:
