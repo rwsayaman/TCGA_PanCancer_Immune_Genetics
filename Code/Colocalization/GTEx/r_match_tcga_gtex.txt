@@ -1,0 +1,103 @@
+inNameList='list_gtex.txt'
+inNameLoci='/wynton/home/burchard/dhu/gtex_tcga/eQTL_Sugg/Loci_unique_in_Merged_gtex_tcga_eqtl_sugg_index_snp.txt'
+inNameBimPrefix='bim_snps_in_tcga_geno_flanking1000_'
+inNameGWASPrefix='Result_snps_in_tcga_gwas_flanking1000_'
+dir.path='/wynton/home/burchard/dhu/gtex_tcga/eQTL_Sugg/'
+outNameGWASPrefix='Result_tcga'
+outNameeQTLPrefix='Result_gtex'
+outNameSNPGWASPrefix='snps_tcga'
+outNameSNPeQTLPrefix='snps_gtex'
+outNameSNPAltGWASPrefix='snps_alt_tcga'
+outNameSNPAlteQTLPrefix='snps_alt_gtex'
+
+write.table(NULL,'Error_match_tcga_gtex.txt',quote=F,sep='\t',row.names=F,col.names=F)
+
+n.flanking=100
+
+loci=read.table(inNameLoci,header=T,stringsAsFactors=F)
+
+list.gtex=read.table(inNameList,stringsAsFactors=F)
+
+for (tempname.gtex in list.gtex[,1]) {
+	strsplit.tempname.gtex=strsplit(tempname.gtex,'_')
+	rsid=gsub('.txt','',strsplit.tempname.gtex[[1]][length(strsplit.tempname.gtex[[1]])])
+	tempname.suffix=gsub('/wynton/home/burchard/dhu/gtex_tcga/eQTL_Sugg/extract_gtex/GTEx_','',tempname.gtex)
+	outNameGWAS=paste0(outNameGWASPrefix,'_',tempname.suffix)
+	outNameeQTL=paste0(outNameeQTLPrefix,'_',tempname.suffix)
+	outNameSNPGWAS=paste0(outNameSNPGWASPrefix,'_',tempname.suffix)
+	outNameSNPeQTL=paste0(outNameSNPeQTLPrefix,'_',tempname.suffix)
+	outNameSNPAltGWAS=paste0(outNameSNPAltGWASPrefix,'_',tempname.suffix)
+	outNameSNPAlteQTL=paste0(outNameSNPAlteQTLPrefix,'_',tempname.suffix)
+
+        pattern.bim=paste0(inNameBimPrefix,rsid)
+        pattern.gwas=paste0(inNameGWASPrefix,rsid)
+        inNameBim=list.files(path=dir.path,pattern=pattern.bim,full.names=T)
+        inNameGWAS=list.files(path=dir.path,pattern=pattern.gwas,full.names=T)
+
+        bim=read.table(inNameBim,stringsAsFactors=F)
+        tcga=read.table(inNameGWAS,header=T,stringsAsFactors=F)
+
+        snp.idx.gtex=loci[loci[,1]==rsid,5]
+        snp.idx.tcga.geno=loci[loci[,1]==rsid,6]
+        snp.idx.tcga.gwas=loci[loci[,1]==rsid,7]
+        bp.idx.b38=loci[loci[,1]==rsid,3]
+
+        snpid1=paste(paste0('chr',bim[,1]),bim[,4],bim[,5],bim[,6],'b38',sep='_')
+        snpid2=paste(paste0('chr',bim[,1]),bim[,4],bim[,6],bim[,5],'b38',sep='_')
+        bim1=cbind(snpid=snpid1,bim)
+        bim2=cbind(snpid=snpid2,bim)
+
+	tempgtex=read.table(tempname.gtex,header=T,stringsAsFactors=F)
+	bim.gtex1=merge(bim1,tempgtex,by.x=1,by.y=2)
+	bim.gtex2=merge(bim2,tempgtex,by.x=1,by.y=2)
+	bim.gtex=rbind(bim.gtex1,bim.gtex2)
+
+	bim.gtex.sort=bim.gtex[order(bim.gtex[,5]),]
+	bim.gtex=bim.gtex.sort
+
+	tempind=which(bim.gtex[,5]==bp.idx.b38)	
+
+	if ((tempind-n.flanking)>=1&(tempind+n.flanking)<=nrow(bim.gtex)) {
+		bim.gtex.in=bim.gtex[(tempind-n.flanking):(tempind+n.flanking),]
+		temp=strsplit(as.character(bim.gtex.in[,1]),'_')
+		ref=sapply(temp,'[',3)
+		alt=sapply(temp,'[',4)
+
+		bim.gtex.final=cbind(bim.gtex.in,ref,alt)
+
+		tcga.gtex=merge(tcga,bim.gtex.final,by.x=1,by.y=3)
+
+		if (nrow(tcga.gtex)==201) {
+			tcga.gtex.sort=tcga.gtex[order(tcga.gtex[,21]),]
+			tcga.gtex=tcga.gtex.sort
+
+			tempz.tcga=-qnorm(tcga.gtex$P/2)
+			tempz.gtex=-qnorm(tcga.gtex$pval_nominal/2)
+			sign.tcga=sign(tcga.gtex$STAT)
+			sign.gtex=sign(tcga.gtex$slope)
+			z.tcga=tempz.tcga*sign.tcga
+			z.gtex=tempz.gtex*sign.gtex
+			ind.code.diff=which(tcga.gtex$alt!=tcga.gtex$A1)
+			sign.tcga.match=rep(1,length(z.tcga))
+			sign.tcga.match[ind.code.diff]=-1
+			z.tcga.match=z.tcga*sign.tcga.match
+	
+			result.tcga.gtex=cbind(tcga.gtex,z.tcga,z.tcga.match,z.gtex)
+			result.sort=result.tcga.gtex[order(result.tcga.gtex[,21]),]
+
+			write.table(result.sort[,c('snpid','z.tcga')],outNameGWAS,quote=F,sep='\t',row.names=F,col.names=F)
+		        write.table(result.sort[,c('snpid','z.gtex')],outNameeQTL,quote=F,sep='\t',row.names=F,col.names=F)
+        		write.table(result.sort[,1],outNameSNPGWAS,quote=F,sep='\t',row.names=F,col.names=F)
+		        write.table(result.sort$snpid,outNameSNPeQTL,quote=F,sep='\t',row.names=F,col.names=F)
+		        write.table(result.sort[,c('chr.bp','alt')],outNameSNPAltGWAS,quote=F,sep='\t',row.names=F,col.names=F)
+		        write.table(result.sort[,c('snpid','alt')],outNameSNPAlteQTL,quote=F,sep='\t',row.names=F,col.names=F)
+		} else {
+			write.table(tempname.gtex,'Error_match_tcga_gtex.txt',quote=F,sep='\t',row.names=F,col.names=F,append=T)
+		}
+	} else {
+		write.table(tempname.gtex,'Error_match_tcga_gtex.txt',quote=F,sep='\t',row.names=F,col.names=F,append=T)
+	}
+}
+
+rm(list=ls())
+

@@ -1,0 +1,16 @@
+#!/bin/sh
+#$ -S /bin/bash
+#
+#$ -o /wynton/home/burchard/dhu/gtex_tcga/eQTL_Sugg/match_and_plink
+#$ -e /wynton/home/burchard/dhu/gtex_tcga/eQTL_Sugg/match_and_plink
+#$ -cwd
+#$ -r n
+#$ -j y
+#$ -l mem_free=20G
+#$ -l h_rt=10:00:00
+##$ -t 1-431
+
+bash run_plink_gtex.sh
+
+
+

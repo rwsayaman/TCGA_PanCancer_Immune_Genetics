@@ -1,0 +1,24 @@
+inNameList='list_geno_gtex.txt'
+inNameGenoPrefix='Geno_gtex'
+inNameSNPprefix='snps_alt_gtex'
+outNamePrefix='Cor_gtex'
+
+list.geno=read.table(inNameList,stringsAsFactors=F)
+
+for (tempname.geno in list.geno[,1]) {
+	tempsuffix=gsub(inNameGenoPrefix,'',tempname.geno)
+	nameSuffix=gsub('.raw','',tempsuffix)
+	inNameSNP=paste0(inNameSNPprefix,nameSuffix,'.txt')
+	outName=paste0(outNamePrefix,nameSuffix,'.txt')
+	tempgeno=read.table(tempname.geno,header=T,check.names=F,stringsAsFactors=F)
+	tempsnp=read.table(inNameSNP,stringsAsFactors=F)
+	tempsnp.alt=paste(tempsnp[,1],tempsnp[,2],sep='_')
+
+	if (all(colnames(tempgeno)[7:ncol(tempgeno)]==tempsnp.alt)) {
+		tempcor=cor(tempgeno[,7:ncol(tempgeno)])
+		write.table(tempcor,outName,quote=F,sep='\t',row.names=F,col.names=F)
+	}
+}
+
+rm(list=ls())
+
