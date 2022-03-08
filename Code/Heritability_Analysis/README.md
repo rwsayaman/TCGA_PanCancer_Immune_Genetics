@@ -178,7 +178,7 @@ Job submission scripts are dependent on the resource allocation management syste
 
 For reference, heritability analysis in Sayaman et al., Immunity 2021 was run in the original UCSF high-performance compute environment TIPCC HPC cluster (now C4) which had 8 communal compute nodes and 1 dedicated node, each with 12 to 64 cores (Each node had from  64 to 512 GiB of RAM and at least 1.8 TiB of fast local disk space).
 
-For troubleshooting of heritability analysis in GCTA GREML, see: https://cnsgenomics.com/software/gcta. For troubleshooting of GWAS in PLINK, see https://www.cog-genomics.org/plink/. For issues with installation of iAtlas , see troubleshooting guide on the software website https://github.com/CRI-iAtlas/iatlas-app.
+For troubleshooting of heritability analysis in GCTA GREML, see: https://cnsgenomics.com/software/gcta. For issues with installation of iAtlas , see troubleshooting guide on the software website https://github.com/CRI-iAtlas/iatlas-app.
 
 
 ### Problem:
