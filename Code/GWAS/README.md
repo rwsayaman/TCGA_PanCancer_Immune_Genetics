@@ -84,17 +84,17 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 17.	Filter resulting summary statistics from PLINK based on test p-values (P in PLINK). Genome-wide significance was defined at p < 5x10-8 and suggestive significance at p < 1x10-6 in our study.
     
-    * See code: "r_plotResults_GWAS.IBD.ALL_Immune.*.r"
+    * See code: “r_plotResults_GWAS.IBD.ALL_Immune.33.Set*.r” and "qsub_r_plotResults_GWAS.IBD.ALL_Immune.33.Set1.txt"
 
 18.	Optional: Visualize results for exploratory data analysis: 
 
     a.	Manhattan plot, plotting GWAS -log10 p-value against the base pair position per chromosome;
     
-    * See code: "r_plotResults_GWAS.IBD.ALL_Immune.*.r"
+    * See code: “r_plotResults_GWAS.IBD.ALL_Immune.33.Set*.r” and "qsub_r_plotResults_GWAS.IBD.ALL_Immune.33.Set1.txt"
 
     b.	QQplot, plotting the quantile distribution of observed P values for each SNP against expected values from a theoretical χ2-distribution; calculate the genomic inflation factor (lamba), the median of the χ2 test statistics divided by the expected median of the χ2 distribution.
     
-    * See code: “r_plotResults_GWAS.IBD.ALL_Immune.*.r”
+    * See code: “r_plotResults_GWAS.IBD.ALL_Immune.33.Set*.r” and "qsub_r_plotResults_GWAS.IBD.ALL_Immune.33.Set1.txt"
 
 **Note:** Interactive visualization of GWAS from  (Sayaman et al., 2021) can be done in CRI iAtlas (https://www.cri-iatlas.org/), in the "Germline Analysis" module or using the PheWeb tool (See the "Interactive visualization of results" section).
 
