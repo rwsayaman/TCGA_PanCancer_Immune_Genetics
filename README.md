@@ -34,7 +34,12 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
 
 
 ## Contents
-* [Apply for dbGaP Authorization](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/dbGaP)
+
+### Before you begin
+
+The protocol describes specific steps using TCGA datasets However, this can be applied in other datasets with similar structure.
+
+* [**Apply for dbGaP Authorization**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/dbGaP)
 
 * [**Software Installation**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Software)
   * PLINK
@@ -52,7 +57,9 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
   * [VEP Annotation](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data/VEP_Annotation)
   * Roadmap Epigenomics Project Epigenomic State Model
 
-* [**Analysis Code**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code)
+### Analysis
+
+* [**Code**](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code)
   * [Pre-processing of Imputed Data](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/PreProcess_HRCImputed)
   * [Immune Traits](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Immune_Traits)
   * [Heritability Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Heritability_Analysis)
