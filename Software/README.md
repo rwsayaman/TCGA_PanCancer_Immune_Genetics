@@ -31,17 +31,22 @@ Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code con
     b.	Download and software documentation is available at: https://www.cog-genomics.org/plink2
 
 5.	GCTA GREML Installation
-6.	
+
     a.	Install GCTA (1.91.2beta or current version) (Yang et al., 2011)
     b.	Download and software documentation is available at: https://cnsgenomics.com/software/gcta
 
 6.	R/Bioconductor and related packages Installation
 
     a.	Install R (3.5.0 or current version). Download and software documentation is available at: https://www.r-project.org/
+    
     b.	Install Bioconductor (3.7 or current version). Installation instructions and documentation is available at: https://www.bioconductor.org/
+    
     c.	Install the R package: snplist (0.18.1 or current version) (Yi et al., 2017).  Installation instructions and documentation is available at: https://cran.r-project.org/web/packages/snplist/index.html
+    
     d.	Install the Bioconductor package: SNPlocs.Hsapiens.dbSNP144.GRCh37 (0.99.20 or current version) (Pagès, 2017). Installation instructions and documentation is available at: (Durinck et al., 2005, 2009)
+    
     e.	Install the Bioconductor package: biomaRt (2.36.1 or current version) (Durinck et al., 2005, 2009). Use host: grch37.ensembl.org. Installation instructions and documentation is available at: https://bioconductor.org/packages/release/bioc/html/biomaRt.html
+    
     f.	Install the Bioconductor package: GenomicRanges (1.32.6 or current version) (Lawrence et al., 2013). Installation instructions and documentation is available at: https://bioconductor.org/packages/release/bioc/html/GenomicRanges.html
 
 7.	LocusZoom Installation
