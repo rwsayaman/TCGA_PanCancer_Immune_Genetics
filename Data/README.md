@@ -22,7 +22,9 @@ Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code con
   * Table S4
   * Table S5
   * Table S6
-  
+  * TCGA QC and HRC Imputed Genotyping Data
+  * VEP Annotation
+
   
 ## Resources
 TCGA QC and HRC Imputed Genotyping Data  
