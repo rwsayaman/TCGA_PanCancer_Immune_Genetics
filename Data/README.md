@@ -15,15 +15,16 @@ Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code con
 
 ## Contents
 
-* Data (Sayaman et al., Immunity 2021)
-  * Table S1
-  * Table S2
-  * Table S3
-  * Table S4
-  * Table S5
-  * Table S6
-  * TCGA QC and HRC Imputed Genotyping Data
-  * VEP Annotation
+* Data Download 
+  * Supplementary Tables (Sayaman et al., Immunity 2021)
+    * Table S1
+    * Table S2
+    * Table S3
+    * Table S4
+    * Table S5
+    * Table S6
+  * [TCGA QC and HRC Imputed Genotyping Data](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data/QC_HRC_Imputed_Genotyping_Data)
+  * [VEP Annotation](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data/VEP_Annotation)
 
   
 ## Resources
