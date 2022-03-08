@@ -89,7 +89,7 @@ epigenomes <- gsub("_mnemonics.bed.gz", "", bed.files)
 # Tab delimited 4 columns
 # chromosome, start (0-based), stop (1-based), state_label_mnemonic for that region
 
-raw.bed <- read.table(file.path(RoadmapEpigenomicsDB.dir, 'test', 'E003_18_core_K27ac_mnemonics.bed'),
+raw.bed <- read.table(file.path(RoadmapEpigenomicsDB.dir, 'test', 'E003_18_core_K27ac_mnemonics.bed.gz'),
                       header=F, row.names = NULL, stringsAsFactors = F)
 
 head(raw.bed)
