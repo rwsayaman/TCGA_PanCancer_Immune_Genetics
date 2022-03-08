@@ -34,24 +34,26 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
 
 
 ## Contents
+* Data Download 
+  * Supplementary Tables (Sayaman et al., Immunity 2021)
+    * Table S1
+    * Table S2
+    * Table S3
+    * Table S4
+    * Table S5
+    * Table S6
+  * [TCGA QC and HRC Imputed Genotyping Data](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data/QC_HRC_Imputed_Genotyping_Data)
+  * [VEP Annotation](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Data/VEP_Annotation)
 * Code
-  * Pre-processing of Imputed Data
-  * Immune Traits
-  * Heritability Analysis
-  * Genome-Wide Association Study (GWAS)
-  * Epigenomic Analysis
-  * Expression and splicing quantitative trait locus analysis (eQTLs and sQTL)
-  * Colocalization with E-Caviar colocalization and manual curation of the expanded region
-  * Rare Variant Analysis
-* Data (Sayaman et al., Immunity 2021)
-  * Table S1
-  * Table S2
-  * Table S3
-  * Table S4
-  * Table S5
-  * Table S6
-  * TCGA QC and HRC Imputed Genotyping Data
-  * VEP Annotation
+  * [Pre-processing of Imputed Data](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/PreProcess_HRCImputed)
+  * [Immune Traits](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Immune_Traits)
+  * [Heritability Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Heritability_Analysis)
+  * [Genome-Wide Association Study (GWAS)](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/GWAS)
+  * [Epigenomic Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Epigenomic_Analysis)
+  * [Expression and splicing quantitative trait locus analysis (eQTLs and sQTL)](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/eQTLs_sQTLs)
+  * [Colocalization with E-Caviar colocalization and manual curation of the expanded region](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Colocalization)
+  * [Rare Variant Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Rare_Variant_Analysis)
+
   
   
 ## Resources
