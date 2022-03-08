@@ -29,7 +29,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 * TCGA HRC imputed genotyping data in plink format
 * Sample file filtered for Identity by Descent (IBD): GWAS.IBD.ALL.TCGAID.txt
 * Covariate file (cancer type, curated germline-imputed sex assignment, age at diagnosis, germline-based ancestry PCA): covar.GWAS.IBD.ALL.txt
-* Immune traits (transformed): Immune.phenotype*.txt    
+* Immune traits (transformed): Immune.phenotype.33.Set*.GWAS.txt    
    **Note:** Immune traits were divided into batches or sets of 5 traits that were ran in parallel.
 
 
@@ -59,7 +59,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
 
 14.	Prepare the phenotype file: 
     
-    * Immune.phenotype.*.txt
+    * Immune.phenotype.33.Set*.GWAS.txt
     
     **Note:** Immune traits were divided into batches or sets of 5 traits that were ran in parallel.
 
@@ -70,7 +70,7 @@ Authors will not be available to assist with troubleshooting. Please familiarize
     * --allow-no-sex 
     * --keep-allele-order 
     * --keep [GWAS.IBD.ALL.TCGAID.txt]
-    * --pheno [Immune.phenotype.*.txt]
+    * --pheno [Immune.phenotype.33.Set*.GWAS.txt]
     * --all-pheno 
     * --covar [covar.GWAS.IBD.ALL.txt] 
     * --linear hide-covar 
