@@ -109,8 +109,7 @@ Note: See: “GTEx.eQTL.all.assoc_extract_GWAS.sugg.SNPs.server.r” script.
 
     vii.	Extract GTEx sQTL results for variant-gene pairs with an FDR < 0.05 in at least one tissue. Exclude the HLA and IL17R locus which are simple eQTLs.
 
-    viii.	Optional: Visualize results by plotting the GTEx sQTL -log10 FDR p-value against the distance from the TSS (“tss_distance”).
-
+    viii.	**Optional:** Visualize results by plotting the GTEx sQTL -log10 FDR p-value against the distance from the TSS (“tss_distance”).
 
     **Note:** See: “GTEx.sQTL.all.assoc_processResults_GWAS.sugg.SNPs_500kb _extended.r” and “GTEx.sQTL.all.assoc_processResults_GWAS.sugg.SNPs_500kb_extended_plot” scripts.
 
