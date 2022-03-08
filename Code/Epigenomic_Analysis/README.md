@@ -13,7 +13,7 @@ Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code con
 
 ## Contributors
 * Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
-* Michele Ceccarelli, Ph.D., University of Naples "Federico II", Istituto di Ricerche Genetiche "G. Salvatore"
+* Acknowledgement: Michele Ceccarelli, Ph.D., University of Naples "Federico II", Istituto di Ricerche Genetiche "G. Salvatore"
 
 
 ## Description
