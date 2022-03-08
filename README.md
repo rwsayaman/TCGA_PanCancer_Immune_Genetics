@@ -77,7 +77,7 @@ The protocol describes specific steps using TCGA datasets However, this can be a
 
 ### Visualization
 
-* Interactive visualization of results
+* [Interactive visualization of results](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Visualization)
   * CRI iAtlas
   * PheWeb
 
