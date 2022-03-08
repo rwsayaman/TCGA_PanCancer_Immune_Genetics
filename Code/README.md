@@ -28,13 +28,17 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
 * Scott Huntsman, M.S., University of California, San Francisco
 * Denise M. Wolf, Ph.D., University of California, San Francisco
 
+## Acknowledgment
+* David L. Gibbs, Ph.D., Institute for Systems Biology
+* Michele Ceccarelli, Ph.D., University of Naples "Federico II", Istituto di Ricerche Genetiche "G. Salvatore"
+
 ## Senior Authors
 * Davide Bedognetti, Ph.D., Sidra Medicine
 * Elad Ziv, Ph.D., University of California, San Francisco
 
 
 ## Contents
-* **Code**
+**Code**
   * [Pre-processing of Imputed Data](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/PreProcess_HRCImputed)
   * [Immune Traits](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Immune_Traits)
   * [Heritability Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Heritability_Analysis)
