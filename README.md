@@ -24,9 +24,15 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
 ## Code Contributors
 * Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
 * Mohamad Saad, Ph.D., Qatar Computing Research Institute: msaad@hbku.edu.qa
+* Carolina Heimann, Institute for Systems Biology
 * Donglei Hu, Ph.D., University of California, San Francisco
-* Scott Huntsman, M.S., University of California, San Francisco
+* Khalid Kunji, Qatar Computing Research Institute
+* Scott Huntsman, University of California, San Francisco
 * Denise M. Wolf, Ph.D., University of California, San Francisco
+
+## Acknowledgment
+* David L. Gibbs, Ph.D., Institute for Systems Biology
+* Michele Ceccarelli, Ph.D., University of Naples "Federico II", Istituto di Ricerche Genetiche "G. Salvatore"
 
 ## Senior Authors
 * Davide Bedognetti, Ph.D., Sidra Medicine
@@ -69,7 +75,12 @@ The protocol describes specific steps using TCGA datasets However, this can be a
   * [Colocalization with E-Caviar colocalization and manual curation of the expanded region](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Colocalization)
   * [Rare Variant Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Rare_Variant_Analysis)
 
-  
+### Visualization
+
+* Interactive visualization of results
+  * CRI iAtlas
+  * PheWeb
+
   
 ## Resources
 1. TCGA QC and HRC Imputed Genotyping Data  
