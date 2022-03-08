@@ -22,13 +22,10 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
 
 
 ## Code Contributors
-* Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
-* Mohamad Saad, Ph.D., Qatar Computing Research Institute: msaad@hbku.edu.qa
 * Carolina Heimann, Institute for Systems Biology
-* Donglei Hu, Ph.D., University of California, San Francisco
 * Khalid Kunji, Qatar Computing Research Institute
-* Scott Huntsman, University of California, San Francisco
-* Denise M. Wolf, Ph.D., University of California, San Francisco
+* Mohamad Saad, Ph.D., Qatar Computing Research Institute: msaad@hbku.edu.qa
+* Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
 
 ## Acknowledgment
 * David L. Gibbs, Ph.D., Institute for Systems Biology
