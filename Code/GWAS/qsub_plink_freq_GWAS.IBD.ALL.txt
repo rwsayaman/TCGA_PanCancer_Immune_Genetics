@@ -1,0 +1,13 @@
+#!/bin/sh
+#PBS -e /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/GWAS
+#PBS -o /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/GWAS
+
+## Set the job name
+#PBS -N qsub_plink_freq_GWAS.IBD.ALL
+#PBS -l vmem=64gb
+#PBS -t 1-22
+
+# Run my job
+cd /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/GWAS
+
+plink --bed /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/HRC/tcga_imputed_hrc1.1_chr$PBS_ARRAYID.bed --bim /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/HRC/tcga_imputed_hrc1.1_snpid_updated_chr$PBS_ARRAYID.bim --fam /zivlab/data2/rsayaman/tcga_legacy/TCGA_Germline_SevenBridgesDownload/RawFiles_birdseed_ALL_n11669/ZivLab.whitelist.10946_FINAL/ZivLab.whitelist.10128_pam.pca.123.k.4_unique.indv/HRC/tcga_imputed_hrc1.1_chr$PBS_ARRAYID.fam --allow-no-sex --keep-allele-order --keep GWAS.IBD.ALL.TCGAID.txt --freq --out Freq/TCGA.IBD.ALL_plink_freq_chr$PBS_ARRAYID
