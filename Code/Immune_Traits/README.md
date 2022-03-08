@@ -46,7 +46,9 @@ Authors will not be available to assist with troubleshooting. Please familiarize
             
     i. Code to generate gene expression signatures from (Wolf et al., 2014) (Amara et al., 2017) and single sample gene set enrichment signatures from (Bindea et al., 2013; Şenbabaoğlu et al., 2016) are provided as a resource.
     
-    * Code for Wolf, Amara gene expression immune signatures: https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Immune_Traits/Wolf_Amara
+    * Code for Wolf et al., 2014, Amara et al., 2017 gene expression immune signatures: https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Immune_Traits/Wolf_Amara
+    * Code for Bindea et al., 2013, Şenbabaoğlu et al., 2016 ssGSEA enrichment scores:
+https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Immune_Traits/ssGSEA_Bindea_Senbabaoglu
             
     ii. Necessary transformation of immune trait values in TCGA for use in genetic analysis described below are annotated in (Sayaman et al., 2021)  (Table S2).
 
