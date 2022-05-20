@@ -13,6 +13,7 @@ Code contained herein are meant as a guide and should be modified and adapted to
 ## Citations
 Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in, and downloading the TCGA QC and HRC imputed genotyping data. 
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
+* Sayaman, Saad, Heimann, et al., Analytic pipelines to assess the relationship between intratumoral immune response and germline genetics. 
 
 Please additionally cite: Thorsson et al., Immunity 2018 when referencing the immune traits.
 * Thorsson et al., Immunity (2018). The Immune Landscape of Cancer. https://doi.org/10.1016/j.immuni.2018.03.023
@@ -29,6 +30,7 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
 * Khalid Kunji, Qatar Computing Research Institute
 * Scott Huntsman, University of California, San Francisco
 * Denise M. Wolf, Ph.D., University of California, San Francisco
+* Vésteinn Thorsson, Ph.D., Institute for Systems Biology
 
 ## Acknowledgment
 * David L. Gibbs, Ph.D., Institute for Systems Biology
@@ -102,7 +104,8 @@ The protocol describes specific steps using TCGA datasets However, this can be a
    
 3. Interactive visualization of results 
    * CRI iAtlas (https://www.cri-iatlas.org/)
-   * PheWeb tool
+   * PheWeb tool (https://pheweb-tcga.qcri.org/)
+
   
   
 
