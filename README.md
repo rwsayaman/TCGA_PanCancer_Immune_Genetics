@@ -99,7 +99,7 @@ The protocol describes specific steps using TCGA datasets However, this can be a
      *  Subfolder: "QC Unimputed Genotyping Data", and read the READ_ME_1.txt file.
      *  Subfolder: "HRC Imputed Genotyping Data", and read the READ_ME_4.txt file.
    
-2. TCGA Germline Immune Response GWAS Summary Statistics. (https://doi.org/10.6084/m9.figshare.13077920.v1)
+2. TCGA Germline Immune Response GWAS Summary Statistics. https://doi.org/10.6084/m9.figshare.13077920.v1
    * Figshare: https://figshare.com/articles/dataset/Sayaman_et_al_TCGA_Germline-Immune_GWAS_Summary_Statistics/13077920/1
    
 3. Interactive visualization of results 
