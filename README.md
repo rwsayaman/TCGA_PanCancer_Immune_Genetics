@@ -1,6 +1,6 @@
 # TCGA_PanCancer_Immune_Genetics
 
-Last updated: 03/07/2022
+Last updated: 03/20/2022
 
 ## Description
 Germline genetic variants shape immune response and may explain some of the immunological heterogeneity observed across patients’ tumors. We present a workflow to assess the contribution of hosts’ genetic background to the immune landscape of solid tumors using harmonized data from more than 9000 patients enrolled in the TCGA. The protocol is developed around the structure of TCGA, but it can be adapted to explore other repositories, for instance in the context of cancer immunotherapy.
