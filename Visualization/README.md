@@ -38,8 +38,8 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
 
 ## Contents
 Interactive visualization of results
-  * CRI iAtlas
-  * PheWeb
+  * CRI iAtlas (https://www.cri-iatlas.org/)
+  * PheWeb (https://pheweb-tcga.qcri.org/)
 
 ## Interactive visualization of results
 
@@ -96,7 +96,7 @@ Interactive visualization of results
     * 6B:	
       * Selection of functional pathway of interest. Summary statistics available for download.
 
-  * A PheWeb tool was setup to visualize GWAS summary statistics of all tested immune traits (Sayaman et al., 2021). The online tool displays an interactive Manhattan plot for each trait and a summary of the most significant SNPs. Zoom-in and –out options are available to get a closer look at genomic regions, where Linkage Disequilibrium (LD) and gene track are shown. 
+  * A PheWeb tool (https://pheweb-tcga.qcri.org/) was setup to visualize GWAS summary statistics of all tested immune traits (Sayaman et al., 2021). The online tool displays an interactive Manhattan plot for each trait and a summary of the most significant SNPs. Zoom-in and –out options are available to get a closer look at genomic regions, where Linkage Disequilibrium (LD) and gene track are shown. 
 
 ## Limitations
 
