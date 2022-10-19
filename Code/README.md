@@ -45,5 +45,5 @@ Please additionally cite: Carrot-Zhang et al., Cancer Cell 2020 when referencing
   * [Genome-Wide Association Study (GWAS)](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/GWAS)
   * [Epigenomic Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Epigenomic_Analysis)
   * [Expression and splicing quantitative trait locus analysis (eQTLs and sQTL)](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/eQTLs_sQTLs)
-  * [Colocalization with eCaviar colocalization and manual curation of the expanded region](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Colocalization)
+  * [Colocalization with eCaviar and manual curation of the expanded region](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Colocalization)
   * [Rare Variant Analysis](https://github.com/rwsayaman/TCGA_PanCancer_Immune_Genetics/tree/main/Code/Rare_Variant_Analysis)
