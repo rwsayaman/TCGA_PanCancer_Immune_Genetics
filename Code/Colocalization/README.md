@@ -2,7 +2,7 @@
 
 Last updated: 03/07/2022
 
-## Colocalization with E-Caviar colocalization and manual curation of the expanded region
+## Colocalization with eCaviar colocalization and manual curation of the expanded region
 
 This section describes colocalization analysis performed with eCAVIAR. This analysis was performed using TCGA and GTEx gene expression data. This analysis requires four input files: (1) GWAS summary statistics, (2) eQTL summary statistics, (3) LD matrix computed with GWAS data, and (4) LD matrix computed with genotype data used for eQTL analysis.
 
