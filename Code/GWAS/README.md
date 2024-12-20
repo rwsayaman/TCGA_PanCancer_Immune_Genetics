@@ -7,12 +7,22 @@ Last updated: 03/07/2022
 GWAS were performed on traits that we found to have significant heritability since these would be most likely driven by common genetic variants. 
 
 ## Citations
-Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
+Please cite the following when using the data and code contained here in: 
+* Sayaman, Saad, Heimann, et al., STAR Protocols (2022). Analytic pipelines to assess the relationship between immune response and germline genetics in human tumors. https://doi.org/10.1016/j.xpro.2022.101809
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
 
-Please additionally cite: Thorsson et al., Immunity 2018 when referencing the immune traits.
-* Thorsson et al., Immunity (2018). The Immune Landscape of Cancer. https://doi.org/10.1016/j.immuni.2018.03.023
+Please cite the following when downloading the TCGA QC and HRC imputed genotyping data:
+* Chambwe, Sayaman, et al., STAR Protocols (2022). Analysis of germline-driven ancestry-associated gene expression in cancers. https://doi.org/10.1016/j.xpro.2022.101586
+* Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
+* Carrot-Zhang et al., Cancer Cell (2020). Comprehensive Analysis of Genetic Ancestry and Its Molecular Correlates in Cancer. https://doi.org/10.1016/j.ccell.2020.04.012
+  
+Please cite the following when referencing ancestry assignments:
+* Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
+* Carrot-Zhang et al., Cancer Cell (2020). Comprehensive Analysis of Genetic Ancestry and Its Molecular Correlates in Cancer. https://doi.org/10.1016/j.ccell.2020.04.012
 
+Please additionally cite the following when referencing the immune traits:
+* Thorsson et al., Immunity (2018). The Immune Landscape of Cancer. https://doi.org/10.1016/j.immuni.2018.03.023
+  
 
 ## Contributors
 * Rosalyn W. Sayaman, Ph.D., University of California, San Francisco: rwsayaman@gmail.com
