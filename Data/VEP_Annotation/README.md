@@ -16,6 +16,8 @@ Last updated: 03/07/2022
 
 
 ## Citations
+Please cite the following when using the data and code contained here in: 
+* Sayaman, Saad, Heimann, et al., STAR Protocols (2022). Analytic pipelines to assess the relationship between immune response and germline genetics in human tumors. https://doi.org/10.1016/j.xpro.2022.101809
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
 
 
