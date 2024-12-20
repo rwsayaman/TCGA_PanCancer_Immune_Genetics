@@ -7,7 +7,8 @@ Last updated: 03/07/2022
 This section describes colocalization analysis performed with eCAVIAR. This analysis was performed using TCGA and GTEx gene expression data. This analysis requires four input files: (1) GWAS summary statistics, (2) eQTL summary statistics, (3) LD matrix computed with GWAS data, and (4) LD matrix computed with genotype data used for eQTL analysis.
 
 ## Citations
-Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
+Please cite the following when using the data and code contained here in: 
+* Sayaman, Saad, Heimann, et al., STAR Protocols (2022). Analytic pipelines to assess the relationship between immune response and germline genetics in human tumors. https://doi.org/10.1016/j.xpro.2022.101809
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
 
 
