@@ -1,18 +1,18 @@
 ## TCGA_PanCancer_Immune_Genetics
 
 ## Immune Traits
-
-Please cite Sayaman, Saad et al., Immunity 2021 when using the data and code contained here in. 
-
-Please additionally cite: Wolf et al. PLoS ONE 2014 and Amara et al. Breast Cancer Res Treat 2017, when using code to calculate gene expression signatures from Wolf et al. and Amara et al.
+The workfflow and code provided calculates immune signatures from gene expression profiles as described in Wolf et al. PLoS ONE 2014, and Amara et al. Breast Cancer Res Treat 2017.
 
 
 ## Citations
+Please cite the following when using the data and code contained here in: 
 * Sayaman, Saad, Heimann, et al., STAR Protocols (2022). Analytic pipelines to assess the relationship between immune response and germline genetics in human tumors. https://doi.org/10.1016/j.xpro.2022.101809
 * Sayaman, Saad et al., Immunity (2021). Germline genetic contribution to the immune landscape of cancer. https://doi.org/10.1016/j.immuni.2021.01.011
-* Thorsson et al., Immunity (2018). The Immune Landscape of Cancer. https://doi.org/10.1016/j.immuni.2018.03.023
+
+Please additionally cite the following when using the data and code to calculate the Wolf immune signatures:
 * Wolf et al., PLoS ONE (2014). Gene co-expression modules as clinically relevant hallmarks of breast cancer diversity. https://doi.org/10.1371/journal.pone.0088309
 * Amara et al., Breast Cancer Res Treat (2017). Co-expression modules identified from published immune signatures reveal five distinct immune subtypes in breast cancer.  https://doi.org/10.1007/s10549-016-4041-3
+
 
 ## Contributors
 * Denise Wolf, Ph.D., University of California, San Francisco
@@ -20,8 +20,6 @@ Please additionally cite: Wolf et al. PLoS ONE 2014 and Amara et al. Breast Canc
 
 
 ## Description
-The workfflow and code provided calculates immune signatures from gene expression profiles as described in Wolf et al. PLoS ONE 2014, and Amara et al. Breast Cancer Res Treat 2017.
-
 Code contained herein are meant as a guide and should be modified and adapted to match your server specifications and directories.
 
 Authors will not be available to assist with troubleshooting. Please familiarize yourself with the associated scripting languages, and contact your server admin for instructions on the proper format for submitting jobs to your compute cluster and to ensure all necessary programs are installed.
