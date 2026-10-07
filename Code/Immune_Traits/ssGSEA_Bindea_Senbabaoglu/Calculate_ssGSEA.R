@@ -32,7 +32,7 @@ gene_list = "Bindea_Senbabaoglu_list"
 available_genes = rownames(ExprData)
 
 Gene.list = get(gene_list)
-unavailable_genes = unlist(Gene.list)[-which(unlist(Gene.list) %in% rownames(Gene.list))] #should be 0
+unavailable_genes = unlist(Gene.list)[-which(unlist(Gene.list) %in% rownames(ExprData))] #should be 0
 unavailable_genes
 
 
